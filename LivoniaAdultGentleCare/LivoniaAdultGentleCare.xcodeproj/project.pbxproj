@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFAB47001D8DB72200F78BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB46FF1D8DB72200F78BF0 /* AppDelegate.swift */; };
+		EFAB47071D8DB72300F78BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAB47051D8DB72300F78BF0 /* Main.storyboard */; };
+		EFAB47091D8DB72300F78BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAB47081D8DB72300F78BF0 /* Assets.xcassets */; };
+		EFAB470C1D8DB72300F78BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAB470A1D8DB72300F78BF0 /* LaunchScreen.storyboard */; };
+		EFAB47171D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47161D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.swift */; };
+		EFAB47221D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47211D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.swift */; };
+		EFAB47341D8DB91200F78BF0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47331D8DB91200F78BF0 /* HomeVC.swift */; };
+		EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47351D8DB92000F78BF0 /* GalleryVC.swift */; };
+		EFAB47381D8DB93D00F78BF0 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */; };
+		EFAB473A1D8DB94700F78BF0 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47391D8DB94700F78BF0 /* ContactVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFAB47131D8DB72300F78BF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFAB46F41D8DB72200F78BF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFAB46FB1D8DB72200F78BF0;
+			remoteInfo = LivoniaAdultGentleCare;
+		};
+		EFAB471E1D8DB72300F78BF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFAB46F41D8DB72200F78BF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFAB46FB1D8DB72200F78BF0;
+			remoteInfo = LivoniaAdultGentleCare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFAB46FC1D8DB72200F78BF0 /* LivoniaAdultGentleCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivoniaAdultGentleCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAB46FF1D8DB72200F78BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFAB47061D8DB72300F78BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFAB47081D8DB72300F78BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFAB470B1D8DB72300F78BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFAB470D1D8DB72300F78BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFAB47121D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LivoniaAdultGentleCareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAB47161D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivoniaAdultGentleCareTests.swift; sourceTree = "<group>"; };
+		EFAB47181D8DB72300F78BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFAB471D1D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LivoniaAdultGentleCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAB47211D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivoniaAdultGentleCareUITests.swift; sourceTree = "<group>"; };
+		EFAB47231D8DB72300F78BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFAB47331D8DB91200F78BF0 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EFAB47351D8DB92000F78BF0 /* GalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		EFAB47391D8DB94700F78BF0 /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFAB46F91D8DB72200F78BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAB470F1D8DB72300F78BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAB471A1D8DB72300F78BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFAB46F31D8DB72200F78BF0 = {
+			isa = PBXGroup;
+			children = (
+				EFAB46FE1D8DB72200F78BF0 /* LivoniaAdultGentleCare */,
+				EFAB47151D8DB72300F78BF0 /* LivoniaAdultGentleCareTests */,
+				EFAB47201D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests */,
+				EFAB46FD1D8DB72200F78BF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFAB46FD1D8DB72200F78BF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB46FC1D8DB72200F78BF0 /* LivoniaAdultGentleCare.app */,
+				EFAB47121D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.xctest */,
+				EFAB471D1D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFAB46FE1D8DB72200F78BF0 /* LivoniaAdultGentleCare */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB472F1D8DB88E00F78BF0 /* Model */,
+				EFAB47301D8DB8A500F78BF0 /* View */,
+				EFAB47311D8DB8AB00F78BF0 /* Controller */,
+				EFAB47321D8DB8C500F78BF0 /* Helper */,
+			);
+			path = LivoniaAdultGentleCare;
+			sourceTree = "<group>";
+		};
+		EFAB47151D8DB72300F78BF0 /* LivoniaAdultGentleCareTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB47161D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.swift */,
+				EFAB47181D8DB72300F78BF0 /* Info.plist */,
+			);
+			path = LivoniaAdultGentleCareTests;
+			sourceTree = "<group>";
+		};
+		EFAB47201D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB47211D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.swift */,
+				EFAB47231D8DB72300F78BF0 /* Info.plist */,
+			);
+			path = LivoniaAdultGentleCareUITests;
+			sourceTree = "<group>";
+		};
+		EFAB472F1D8DB88E00F78BF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EFAB47301D8DB8A500F78BF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EFAB47311D8DB8AB00F78BF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB47331D8DB91200F78BF0 /* HomeVC.swift */,
+				EFAB47351D8DB92000F78BF0 /* GalleryVC.swift */,
+				EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */,
+				EFAB47391D8DB94700F78BF0 /* ContactVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EFAB47321D8DB8C500F78BF0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB46FF1D8DB72200F78BF0 /* AppDelegate.swift */,
+				EFAB47051D8DB72300F78BF0 /* Main.storyboard */,
+				EFAB47081D8DB72300F78BF0 /* Assets.xcassets */,
+				EFAB470A1D8DB72300F78BF0 /* LaunchScreen.storyboard */,
+				EFAB470D1D8DB72300F78BF0 /* Info.plist */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFAB46FB1D8DB72200F78BF0 /* LivoniaAdultGentleCare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFAB47261D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCare" */;
+			buildPhases = (
+				EFAB46F81D8DB72200F78BF0 /* Sources */,
+				EFAB46F91D8DB72200F78BF0 /* Frameworks */,
+				EFAB46FA1D8DB72200F78BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivoniaAdultGentleCare;
+			productName = LivoniaAdultGentleCare;
+			productReference = EFAB46FC1D8DB72200F78BF0 /* LivoniaAdultGentleCare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFAB47111D8DB72300F78BF0 /* LivoniaAdultGentleCareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFAB47291D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCareTests" */;
+			buildPhases = (
+				EFAB470E1D8DB72300F78BF0 /* Sources */,
+				EFAB470F1D8DB72300F78BF0 /* Frameworks */,
+				EFAB47101D8DB72300F78BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFAB47141D8DB72300F78BF0 /* PBXTargetDependency */,
+			);
+			name = LivoniaAdultGentleCareTests;
+			productName = LivoniaAdultGentleCareTests;
+			productReference = EFAB47121D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFAB471C1D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFAB472C1D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCareUITests" */;
+			buildPhases = (
+				EFAB47191D8DB72300F78BF0 /* Sources */,
+				EFAB471A1D8DB72300F78BF0 /* Frameworks */,
+				EFAB471B1D8DB72300F78BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFAB471F1D8DB72300F78BF0 /* PBXTargetDependency */,
+			);
+			name = LivoniaAdultGentleCareUITests;
+			productName = LivoniaAdultGentleCareUITests;
+			productReference = EFAB471D1D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFAB46F41D8DB72200F78BF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ovidiu Bortas";
+				TargetAttributes = {
+					EFAB46FB1D8DB72200F78BF0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78PY5HFX5F;
+						ProvisioningStyle = Automatic;
+					};
+					EFAB47111D8DB72300F78BF0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78PY5HFX5F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFAB46FB1D8DB72200F78BF0;
+					};
+					EFAB471C1D8DB72300F78BF0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 78PY5HFX5F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFAB46FB1D8DB72200F78BF0;
+					};
+				};
+			};
+			buildConfigurationList = EFAB46F71D8DB72200F78BF0 /* Build configuration list for PBXProject "LivoniaAdultGentleCare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFAB46F31D8DB72200F78BF0;
+			productRefGroup = EFAB46FD1D8DB72200F78BF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFAB46FB1D8DB72200F78BF0 /* LivoniaAdultGentleCare */,
+				EFAB47111D8DB72300F78BF0 /* LivoniaAdultGentleCareTests */,
+				EFAB471C1D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFAB46FA1D8DB72200F78BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAB470C1D8DB72300F78BF0 /* LaunchScreen.storyboard in Resources */,
+				EFAB47091D8DB72300F78BF0 /* Assets.xcassets in Resources */,
+				EFAB47071D8DB72300F78BF0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAB47101D8DB72300F78BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAB471B1D8DB72300F78BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFAB46F81D8DB72200F78BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAB47001D8DB72200F78BF0 /* AppDelegate.swift in Sources */,
+				EFAB47381D8DB93D00F78BF0 /* NewsVC.swift in Sources */,
+				EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */,
+				EFAB47341D8DB91200F78BF0 /* HomeVC.swift in Sources */,
+				EFAB473A1D8DB94700F78BF0 /* ContactVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAB470E1D8DB72300F78BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAB47171D8DB72300F78BF0 /* LivoniaAdultGentleCareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAB47191D8DB72300F78BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAB47221D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFAB47141D8DB72300F78BF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFAB46FB1D8DB72200F78BF0 /* LivoniaAdultGentleCare */;
+			targetProxy = EFAB47131D8DB72300F78BF0 /* PBXContainerItemProxy */;
+		};
+		EFAB471F1D8DB72300F78BF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFAB46FB1D8DB72200F78BF0 /* LivoniaAdultGentleCare */;
+			targetProxy = EFAB471E1D8DB72300F78BF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFAB47051D8DB72300F78BF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFAB47061D8DB72300F78BF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFAB470A1D8DB72300F78BF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFAB470B1D8DB72300F78BF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFAB47241D8DB72300F78BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFAB47251D8DB72300F78BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFAB47271D8DB72300F78BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78PY5HFX5F;
+				INFOPLIST_FILE = LivoniaAdultGentleCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BortasOvi.LivoniaAdultGentleCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EFAB47281D8DB72300F78BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78PY5HFX5F;
+				INFOPLIST_FILE = LivoniaAdultGentleCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BortasOvi.LivoniaAdultGentleCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EFAB472A1D8DB72300F78BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78PY5HFX5F;
+				INFOPLIST_FILE = LivoniaAdultGentleCareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BortasOvi.LivoniaAdultGentleCareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LivoniaAdultGentleCare.app/LivoniaAdultGentleCare";
+			};
+			name = Debug;
+		};
+		EFAB472B1D8DB72300F78BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78PY5HFX5F;
+				INFOPLIST_FILE = LivoniaAdultGentleCareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BortasOvi.LivoniaAdultGentleCareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LivoniaAdultGentleCare.app/LivoniaAdultGentleCare";
+			};
+			name = Release;
+		};
+		EFAB472D1D8DB72300F78BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 78PY5HFX5F;
+				INFOPLIST_FILE = LivoniaAdultGentleCareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BortasOvi.LivoniaAdultGentleCareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LivoniaAdultGentleCare;
+			};
+			name = Debug;
+		};
+		EFAB472E1D8DB72300F78BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 78PY5HFX5F;
+				INFOPLIST_FILE = LivoniaAdultGentleCareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BortasOvi.LivoniaAdultGentleCareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LivoniaAdultGentleCare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFAB46F71D8DB72200F78BF0 /* Build configuration list for PBXProject "LivoniaAdultGentleCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAB47241D8DB72300F78BF0 /* Debug */,
+				EFAB47251D8DB72300F78BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFAB47261D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAB47271D8DB72300F78BF0 /* Debug */,
+				EFAB47281D8DB72300F78BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFAB47291D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAB472A1D8DB72300F78BF0 /* Debug */,
+				EFAB472B1D8DB72300F78BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFAB472C1D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFAB472D1D8DB72300F78BF0 /* Debug */,
+				EFAB472E1D8DB72300F78BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFAB46F41D8DB72200F78BF0 /* Project object */;
+}
