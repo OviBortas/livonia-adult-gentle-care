@@ -17,6 +17,12 @@
 		EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47351D8DB92000F78BF0 /* GalleryVC.swift */; };
 		EFAB47381D8DB93D00F78BF0 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */; };
 		EFAB473A1D8DB94700F78BF0 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB47391D8DB94700F78BF0 /* ContactVC.swift */; };
+		EFAB473D1D8DBE9900F78BF0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAB473C1D8DBE9900F78BF0 /* MapKit.framework */; };
+		EFF5141D1D91F977001F5B41 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5141C1D91F977001F5B41 /* TabBarController.swift */; };
+		EFF514211D9207C8001F5B41 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF514201D9207C8001F5B41 /* GalleryCell.swift */; };
+		EFF514231D9207FD001F5B41 /* GalleryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF514221D9207FD001F5B41 /* GalleryCVC.swift */; };
+		EFF514251D92173F001F5B41 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF514241D92173F001F5B41 /* TabBarItem.swift */; };
+		EFF514271D923700001F5B41 /* CHTCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF514261D923700001F5B41 /* CHTCollectionViewWaterfallLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		EFAB47351D8DB92000F78BF0 /* GalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		EFAB47391D8DB94700F78BF0 /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		EFAB473C1D8DBE9900F78BF0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EFF5141C1D91F977001F5B41 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EFF514201D9207C8001F5B41 /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		EFF514221D9207FD001F5B41 /* GalleryCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCVC.swift; sourceTree = "<group>"; };
+		EFF514241D92173F001F5B41 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		EFF514261D923700001F5B41 /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAB473D1D8DBE9900F78BF0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +96,12 @@
 		EFAB46F31D8DB72200F78BF0 = {
 			isa = PBXGroup;
 			children = (
+				EFF514201D9207C8001F5B41 /* GalleryCell.swift */,
 				EFAB46FE1D8DB72200F78BF0 /* LivoniaAdultGentleCare */,
 				EFAB47151D8DB72300F78BF0 /* LivoniaAdultGentleCareTests */,
 				EFAB47201D8DB72300F78BF0 /* LivoniaAdultGentleCareUITests */,
 				EFAB46FD1D8DB72200F78BF0 /* Products */,
+				EFAB473B1D8DBE9900F78BF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +147,7 @@
 		EFAB472F1D8DB88E00F78BF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFF514261D923700001F5B41 /* CHTCollectionViewWaterfallLayout.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -150,6 +166,9 @@
 				EFAB47351D8DB92000F78BF0 /* GalleryVC.swift */,
 				EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */,
 				EFAB47391D8DB94700F78BF0 /* ContactVC.swift */,
+				EFF514221D9207FD001F5B41 /* GalleryCVC.swift */,
+				EFF5141C1D91F977001F5B41 /* TabBarController.swift */,
+				EFF514241D92173F001F5B41 /* TabBarItem.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,6 +183,14 @@
 				EFAB470D1D8DB72300F78BF0 /* Info.plist */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		EFAB473B1D8DBE9900F78BF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB473C1D8DBE9900F78BF0 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,17 +262,20 @@
 					EFAB46FB1D8DB72200F78BF0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 78PY5HFX5F;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					EFAB47111D8DB72300F78BF0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 78PY5HFX5F;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EFAB46FB1D8DB72200F78BF0;
 					};
 					EFAB471C1D8DB72300F78BF0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 78PY5HFX5F;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EFAB46FB1D8DB72200F78BF0;
 					};
@@ -304,10 +334,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAB47001D8DB72200F78BF0 /* AppDelegate.swift in Sources */,
+				EFF514271D923700001F5B41 /* CHTCollectionViewWaterfallLayout.swift in Sources */,
+				EFF514211D9207C8001F5B41 /* GalleryCell.swift in Sources */,
 				EFAB47381D8DB93D00F78BF0 /* NewsVC.swift in Sources */,
+				EFF514251D92173F001F5B41 /* TabBarItem.swift in Sources */,
 				EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */,
+				EFF5141D1D91F977001F5B41 /* TabBarController.swift in Sources */,
 				EFAB47341D8DB91200F78BF0 /* HomeVC.swift in Sources */,
 				EFAB473A1D8DB94700F78BF0 /* ContactVC.swift in Sources */,
+				EFF514231D9207FD001F5B41 /* GalleryCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +593,7 @@
 				EFAB47281D8DB72300F78BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFAB47291D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCareTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +602,7 @@
 				EFAB472B1D8DB72300F78BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFAB472C1D8DB72300F78BF0 /* Build configuration list for PBXNativeTarget "LivoniaAdultGentleCareUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +611,7 @@
 				EFAB472E1D8DB72300F78BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
