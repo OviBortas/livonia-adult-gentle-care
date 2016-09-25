@@ -8,12 +8,20 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, ShadowHideable {
+    var isShadowLineHidden: Bool = false
     
-    fileprivate var img: UIImage?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        hideShadowLine()
     }
+}
+
+class NavigationBar: UINavigationBar, ShadowHideable {
+    var isShadowLineHidden: Bool = false
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        hideShadowLine()
+    }
 }

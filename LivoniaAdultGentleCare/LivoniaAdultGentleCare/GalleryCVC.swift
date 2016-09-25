@@ -8,20 +8,40 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "gallaryCollectionCell"
 
-class GalleryCVC: UICollectionViewController {
+class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfallLayout {
+    
+    let model = GalleryModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupLayout()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupLayout() {
+        let layout = CHTCollectionViewWaterfallLayout()
+        layout.columnCount = 2
+        
+        layout.minimumColumnSpacing = 10.0
+        layout.minimumInteritemSpacing = 1.0
+        
+        let bottomInset = UITabBarController().tabBar.frame.size.height + 4.0 + 2.0
+        layout.sectionInset = UIEdgeInsets(top: 0.0, left: 8.0, bottom: bottomInset, right: 8.0)
+        
+        collectionView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        collectionView?.alwaysBounceVertical = true
+        
+        collectionView?.collectionViewLayout = layout
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,26 +61,46 @@ class GalleryCVC: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return model.data.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GalleryCell
+        
         // Configure the cell
-    
+        
+        cell.imageView.image = model.data[indexPath.row].image
+        cell.titleLabel.text = model.data[indexPath.row].title
+        
+        if indexPath.row == model.data.count - 1 {
+            cell.detailView.isHidden = true
+            cell.imageView.alpha = 0.6
+        }
+        
         return cell
+    }
+    
+    
+    // MARK:- CHTCollectionViewDelegateWaterfallLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+        let imageSize = model.data[indexPath.row].image.size
+        return imageSize
+        
     }
 
     // MARK: UICollectionViewDelegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(model.data[indexPath.row].title)
+    }
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking

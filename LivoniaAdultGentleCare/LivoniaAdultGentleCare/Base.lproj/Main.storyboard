@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtq-SH-LKY">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtq-SH-LKY" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="gXe-22-Lk8"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqP-wp-dxH">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqP-wp-dxH" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="PMQ-i5-Ram"/>
                                 </constraints>
@@ -88,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-wQ-Abe">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-wQ-Abe" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="1M3-pj-3VU"/>
                                 </constraints>
@@ -97,7 +97,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kJy-wQ-Abe" firstAttribute="top" secondItem="VCc-VH-8v9" secondAttribute="top" id="AkJ-Jv-aay"/>
                             <constraint firstAttribute="trailing" secondItem="kJy-wQ-Abe" secondAttribute="trailing" id="YdI-qr-QdV"/>
@@ -122,7 +122,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eff-oR-rqm">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eff-oR-rqm" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Mz9-tY-xc6"/>
                                 </constraints>
@@ -158,10 +158,9 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" customClass="TabBarController" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -178,7 +177,7 @@
         <scene sceneID="kLj-Qj-FHd">
             <objects>
                 <collectionViewController id="kLT-8A-GV4" customClass="GalleryCVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ggy-Ip-juS">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Ggy-Ip-juS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,14 +188,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gallaryCollectionCell" id="0RT-OI-j0g" customClass="GalleryCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="gallaryCollectionCell" id="0RT-OI-j0g" customClass="GalleryCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
                                 <rect key="frame" x="73" y="0.0" width="230" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="230" height="276"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-wI-dN3"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-wI-dN3"/>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZt-C5-Uh1">
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="C8b-Sb-E6e">
@@ -212,9 +211,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="dce-7z-tjj"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,20 +220,22 @@
                                                 <constraint firstAttribute="trailing" secondItem="C8b-Sb-E6e" secondAttribute="trailing" constant="8" id="GgA-HA-A8b"/>
                                                 <constraint firstAttribute="height" constant="30" id="IVb-iJ-4Qf"/>
                                                 <constraint firstItem="C8b-Sb-E6e" firstAttribute="leading" secondItem="aZt-C5-Uh1" secondAttribute="leading" constant="8" id="wYb-jU-2s5"/>
+                                                <constraint firstItem="C8b-Sb-E6e" firstAttribute="top" secondItem="aZt-C5-Uh1" secondAttribute="top" id="xPs-3T-Q3Y"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="aZt-C5-Uh1" secondAttribute="bottom" id="7kA-8f-3iq"/>
-                                    <constraint firstItem="aZt-C5-Uh1" firstAttribute="leading" secondItem="0RT-OI-j0g" secondAttribute="leading" id="Ah1-Zo-nNZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="1ny-wI-dN3" secondAttribute="bottom" id="Iuf-TO-kat"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ny-wI-dN3" secondAttribute="bottom" constant="1" id="Iuf-TO-kat"/>
                                     <constraint firstItem="1ny-wI-dN3" firstAttribute="leading" secondItem="0RT-OI-j0g" secondAttribute="leading" id="Lwb-6V-IJq"/>
+                                    <constraint firstItem="aZt-C5-Uh1" firstAttribute="width" secondItem="0RT-OI-j0g" secondAttribute="width" id="MmR-TO-7me"/>
                                     <constraint firstItem="1ny-wI-dN3" firstAttribute="top" secondItem="0RT-OI-j0g" secondAttribute="top" id="Osr-JF-pgs"/>
-                                    <constraint firstAttribute="trailing" secondItem="aZt-C5-Uh1" secondAttribute="trailing" id="WUL-yz-2Z5"/>
+                                    <constraint firstAttribute="bottom" secondItem="aZt-C5-Uh1" secondAttribute="bottom" id="c0B-Xt-0Bt"/>
+                                    <constraint firstItem="aZt-C5-Uh1" firstAttribute="centerX" secondItem="0RT-OI-j0g" secondAttribute="centerX" id="nrq-9G-36Y"/>
                                     <constraint firstAttribute="trailing" secondItem="1ny-wI-dN3" secondAttribute="trailing" id="ov9-US-6Mb"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="detailView" destination="aZt-C5-Uh1" id="ci0-wT-CGC"/>
                                     <outlet property="imageView" destination="1ny-wI-dN3" id="GYb-Bz-HYi"/>
                                     <outlet property="titleLabel" destination="gk2-en-lAU" id="XXC-Pb-laj"/>
                                 </connections>
@@ -255,13 +253,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="(Selected) Contact Icon" width="37" height="37"/>
-        <image name="(Selected) Gallary Icon" width="37" height="37"/>
-        <image name="(Selected) Home Icon" width="25" height="25"/>
-        <image name="(Selected) News Icon" width="37" height="37"/>
-        <image name="(Unselected) Contact Icon" width="37" height="37"/>
+        <image name="(Selected) Contact Icon" width="30" height="30"/>
+        <image name="(Selected) Gallary Icon" width="30" height="30"/>
+        <image name="(Selected) Home Icon" width="30" height="30"/>
+        <image name="(Selected) News Icon" width="30" height="30"/>
+        <image name="(Unselected) Contact Icon" width="30" height="30"/>
         <image name="(Unselected) Gallary Icon" width="30" height="30"/>
-        <image name="(Unselected) Home Icon" width="37" height="37"/>
-        <image name="(Unselected) News Icon" width="37" height="37"/>
+        <image name="(Unselected) Home Icon" width="30" height="30"/>
+        <image name="(Unselected) News Icon" width="30" height="30"/>
     </resources>
 </document>

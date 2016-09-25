@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarItem: UITabBarItem {
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
 }
