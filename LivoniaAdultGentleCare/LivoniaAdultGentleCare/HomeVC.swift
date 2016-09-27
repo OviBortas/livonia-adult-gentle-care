@@ -8,28 +8,38 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
 
+class HomeVC: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var angleView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyTF: UITextView!
+    
+    var data: HomeDisplayData!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imageView.image = UIImage(named: data.imageName)
+        titleLabel.text = data.title
+        bodyTF.text = data.body
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+
+
+class View: UIView {
+    override func draw(_ rect: CGRect) {
+        let ctx = UIGraphicsGetCurrentContext()
+        
+        ctx?.beginPath()
+        ctx?.move(to: CGPoint(x: bounds.origin.x, y: bounds.size.height))
+        ctx?.addLine(to: CGPoint(x: bounds.size.width, y: bounds.size.height))
+        ctx?.addLine(to: CGPoint(x: bounds.size.width, y: bounds.origin.y))
+        ctx?.addLine(to: CGPoint(x: bounds.origin.x, y: bounds.size.height))
+        ctx?.closePath()
+        
+        ctx?.setFillColor(UIColor.white.cgColor)
+        ctx?.fillPath()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
