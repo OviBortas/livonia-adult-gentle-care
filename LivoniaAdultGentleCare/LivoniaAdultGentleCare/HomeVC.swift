@@ -14,14 +14,29 @@ class HomeVC: UIViewController {
     @IBOutlet weak var angleView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTF: UITextView!
+    @IBOutlet weak var labelLine: UIView!
     
     var data: HomeDisplayData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         imageView.image = UIImage(named: data.imageName)
         titleLabel.text = data.title
         bodyTF.text = data.body
+        
+        labelLine.constraints.forEach { (constraint) in
+            if constraint.firstAttribute == .height {
+                labelLine.layer.cornerRadius = constraint.constant / 2
+            }
+        }
+        
+        labelLine.layer.shadowColor = labelLine.backgroundColor?.withAlphaComponent(0.8).cgColor
+        labelLine.layer.shadowOffset = CGSize(width: 0, height: 0)
+        labelLine.layer.shadowOpacity = 1.0
+    
+        
+        
     }
 }
 

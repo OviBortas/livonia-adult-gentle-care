@@ -9,23 +9,28 @@
 import UIKit
 
 struct GalleryData {
-    let image: UIImage
     let title: String
+    let displayImg: UIImage
+    let imgNames: [String]
 }
 
 class GalleryModel {
     
     let data: [GalleryData] = {
         
-        let d1 = GalleryData(image: UIImage(named: "Pinapples")!, title: "First")
-        let d2 = GalleryData(image: UIImage(named: "img1")!, title: "Second")
-        let d3 = GalleryData(image: UIImage(named: "Pinapples")!, title: "Third")
-        let d4 = GalleryData(image: UIImage(named: "Pinapples")!, title: "Fourth")
-        let d5 = GalleryData(image: UIImage(named: "Pinapples")!, title: "Fifth")
-        let d6 = GalleryData(image: UIImage(named: "Pinapples")!, title: "Sixth")
-        let d7 = GalleryData(image: UIImage(named: "Heart Logo Recovered (Gray)")!, title: "7th")
+        // set the names of the pictures associated with the item
+        let picNames = ["Island", "img1", "Island"]
+        let item1 = GalleryData(title: "First", displayImg: UIImage(named: "Pinapples")!, imgNames: picNames)
         
-        return [d1, d2, d3, d4, d5, d6, d7]
+        
+        let item2 = GalleryData(title: "Second", displayImg: UIImage(named: "img1")!, imgNames: picNames)
+        let item3 = GalleryData(title: "Third", displayImg: UIImage(named: "Pinapples")!, imgNames: picNames)
+        let item4 = GalleryData(title: "Fourth", displayImg: UIImage(named: "Pinapples")!, imgNames: picNames)
+        let item5 = GalleryData(title: "Fifth", displayImg: UIImage(named: "Pinapples")!, imgNames: picNames)
+        let item6 = GalleryData(title: "Sixth", displayImg: UIImage(named: "Pinapples")!, imgNames: picNames)
+        let item7 = GalleryData(title: "None", displayImg: UIImage(named: "Heart Logo Recovered (Gray)")!, imgNames: ["None"])
+        
+        return [item1, item2, item3, item4, item5, item6, item7]
     }()
     
 

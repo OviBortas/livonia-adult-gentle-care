@@ -40,6 +40,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wi-fU-b7w">
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.15686274509803921" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hYs-n9-mcH"/>
+                                    <constraint firstAttribute="height" constant="4" id="tNN-64-mak"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -47,8 +54,10 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="cpY-lO-2SN" secondAttribute="bottom" id="ACs-Qp-fi4"/>
                             <constraint firstItem="WIM-so-gMV" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="DLs-qe-FVR"/>
                             <constraint firstAttribute="trailing" secondItem="PHE-FK-Oxx" secondAttribute="trailing" constant="16" id="DM6-O9-GU0"/>
-                            <constraint firstItem="cpY-lO-2SN" firstAttribute="top" secondItem="PHE-FK-Oxx" secondAttribute="bottom" constant="8" id="M6H-jP-nCQ"/>
+                            <constraint firstItem="cpY-lO-2SN" firstAttribute="top" secondItem="4Wi-fU-b7w" secondAttribute="bottom" constant="8" id="JrI-Tj-uG6"/>
+                            <constraint firstItem="4Wi-fU-b7w" firstAttribute="top" secondItem="PHE-FK-Oxx" secondAttribute="bottom" constant="8" id="Wid-HK-g1H"/>
                             <constraint firstItem="pw9-4T-Ml0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="X02-oP-SfR"/>
+                            <constraint firstItem="4Wi-fU-b7w" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Znu-iw-0Wq"/>
                             <constraint firstAttribute="trailing" secondItem="cpY-lO-2SN" secondAttribute="trailing" constant="16" id="cc6-NO-PsJ"/>
                             <constraint firstItem="PHE-FK-Oxx" firstAttribute="top" secondItem="pw9-4T-Ml0" secondAttribute="bottom" constant="8" id="dun-Ss-QO9"/>
                             <constraint firstItem="PHE-FK-Oxx" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="j06-Ji-yIQ"/>
@@ -63,13 +72,14 @@
                         <outlet property="angleView" destination="pw9-4T-Ml0" id="GXC-1N-36b"/>
                         <outlet property="bodyTF" destination="cpY-lO-2SN" id="nj7-1G-ssn"/>
                         <outlet property="imageView" destination="WIM-so-gMV" id="8an-Xy-Su1"/>
+                        <outlet property="labelLine" destination="4Wi-fU-b7w" id="461-So-vVk"/>
                         <outlet property="titleLabel" destination="PHE-FK-Oxx" id="ul8-fG-D1m"/>
                         <outlet property="view" destination="tsR-hK-woN" id="KlL-4i-JOr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1742" y="1363"/>
+            <point key="canvasLocation" x="-1743.2" y="1362.3688155922041"/>
         </scene>
         <!--News-->
         <scene sceneID="ydj-mh-ZmC">
@@ -103,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMp-Ag-53m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="663"/>
+            <point key="canvasLocation" x="929.5" y="662.5"/>
         </scene>
         <!--Contact-->
         <scene sceneID="xz5-qe-Hhc">
@@ -128,7 +138,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
                                 <string key="text">Livonia Adult Care
 Contact Information</string>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -138,223 +148,173 @@ Contact Information</string>
                                     <constraint firstAttribute="height" constant="1" id="zi2-95-XEU"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-Lg-OEV"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DcK-Ri-LQV">
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gl-Qm-dRK">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-cN-huS">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="hlG-99-fjr"/>
-                                                    <constraint firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="oUi-en-4Je"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-5h-XQ6">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="999" constant="30" id="T6S-HH-mNd"/>
-                                                    <constraint firstAttribute="width" constant="60" id="hgB-du-KHZ"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Phone:">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.20000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="  (248)-514-0772" translatesAutoresizingMaskIntoConstraints="NO" id="Nw0-di-Pf6">
-                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                                            </textView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Nw0-di-Pf6" secondAttribute="trailing" id="Gx6-sP-bAq"/>
-                                            <constraint firstItem="aUA-5h-XQ6" firstAttribute="leading" secondItem="ZSV-cN-huS" secondAttribute="trailing" priority="999" constant="8" id="Vmi-G0-Km5"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-II-4Zq">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Address Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-rs-nDD"/>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPt-0u-U9v">
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Address:">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.20000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-dJ-pIi">
-                                                <string key="text">  29043 Dardanella St.
-  Livonia MI, 48152</string>
-                                                <color key="textColor" red="0.0" green="0.48765313625335693" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
-                                            </textView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyg-cz-vxx">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fZq-X8-hzo"/>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-fB-1Kl">
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Email:">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.20000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="  ciobanuzamfira@yahoo.com" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-u5-A4h">
-                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                                            </textView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6u-t4-8A3">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Website Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-W7-dq3"/>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghi-dv-1si">
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Website:">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.20000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="  www.lagc.com" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-WK-I2R">
-                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                                            </textView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B9-Ln-TKb">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Social Media" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-N0-fhF"/>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpw-ru-Ev9">
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Social:">
-                                                        <attributes>
-                                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.20000000000000001" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Social Images" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-CB-a5p">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                                            </textView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-cN-huS">
                                 <constraints>
-                                    <constraint firstItem="YIP-fB-1Kl" firstAttribute="width" secondItem="aUA-5h-XQ6" secondAttribute="width" id="Ang-lM-ZEi"/>
-                                    <constraint firstItem="9rt-W7-dq3" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="Bei-Et-aAF"/>
-                                    <constraint firstItem="Ghi-dv-1si" firstAttribute="width" secondItem="aUA-5h-XQ6" secondAttribute="width" id="FnE-GC-TrG"/>
-                                    <constraint firstItem="fZq-X8-hzo" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="GzT-8G-EuQ"/>
-                                    <constraint firstItem="gPt-0u-U9v" firstAttribute="width" secondItem="aUA-5h-XQ6" secondAttribute="width" id="R76-Qa-zWr"/>
-                                    <constraint firstItem="dTT-rs-nDD" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="bq6-4e-77V"/>
-                                    <constraint firstItem="Zpw-ru-Ev9" firstAttribute="width" secondItem="aUA-5h-XQ6" secondAttribute="width" id="lHF-UW-7EL"/>
-                                    <constraint firstItem="GWs-N0-fhF" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="pwp-yJ-Ae8"/>
+                                    <constraint firstAttribute="height" constant="38" id="oHQ-Ra-n3u"/>
+                                    <constraint firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="uHD-R5-Rht"/>
                                 </constraints>
-                            </stackView>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-5h-XQ6">
+                                <attributedString key="attributedText">
+                                    <fragment content="Phone:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(248) 514-0772" translatesAutoresizingMaskIntoConstraints="NO" id="Nw0-di-Pf6">
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Address Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-rs-nDD"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPt-0u-U9v">
+                                <attributedString key="attributedText">
+                                    <fragment content="Address:">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-dJ-pIi">
+                                <string key="text">29043 Dardanella St.
+Livonia MI, 48152</string>
+                                <color key="textColor" red="0.0" green="0.48765313625335693" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fZq-X8-hzo"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-fB-1Kl">
+                                <attributedString key="attributedText">
+                                    <fragment content="Email:">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="ciobanuzamfira@yahoo.com" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-u5-A4h">
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Website Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-W7-dq3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghi-dv-1si">
+                                <attributedString key="attributedText">
+                                    <fragment content="Website:">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="www.lagc.com" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-WK-I2R">
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Social Media" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-N0-fhF"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpw-ru-Ev9">
+                                <attributedString key="attributedText">
+                                    <fragment content="Social:">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AvenirNextCondensed-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-Lg-OEV"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Social Images" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-CB-a5p">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="DcK-Ri-LQV" secondAttribute="trailing" constant="8" id="2v7-OU-SQ7"/>
+                            <constraint firstItem="aUA-5h-XQ6" firstAttribute="leading" secondItem="ZSV-cN-huS" secondAttribute="trailing" constant="30" id="2di-1P-jOa"/>
+                            <constraint firstItem="Zpw-ru-Ev9" firstAttribute="centerY" secondItem="GWs-N0-fhF" secondAttribute="centerY" id="5PB-6A-Ldg"/>
+                            <constraint firstItem="dTT-rs-nDD" firstAttribute="top" secondItem="ZSV-cN-huS" secondAttribute="bottom" constant="8" id="5wM-24-FjI"/>
+                            <constraint firstItem="Kc9-CB-a5p" firstAttribute="centerY" secondItem="Zpw-ru-Ev9" secondAttribute="centerY" id="9ha-Ur-Hhz"/>
                             <constraint firstItem="kJy-wQ-Abe" firstAttribute="top" secondItem="VCc-VH-8v9" secondAttribute="top" id="AkJ-Jv-aay"/>
-                            <constraint firstItem="DcK-Ri-LQV" firstAttribute="top" secondItem="uW8-vu-o7H" secondAttribute="bottom" constant="8" id="Fj2-Py-QWr"/>
+                            <constraint firstItem="KKc-dJ-pIi" firstAttribute="centerY" secondItem="gPt-0u-U9v" secondAttribute="centerY" id="BhF-KH-R6u"/>
+                            <constraint firstItem="Ghi-dv-1si" firstAttribute="centerY" secondItem="9rt-W7-dq3" secondAttribute="centerY" id="BzY-E0-LCh"/>
+                            <constraint firstItem="9rt-W7-dq3" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="D2C-fg-T2t"/>
+                            <constraint firstItem="fZq-X8-hzo" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="D2u-pY-q9K"/>
+                            <constraint firstItem="9rt-W7-dq3" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="DBg-Xl-j8D"/>
+                            <constraint firstItem="GWs-N0-fhF" firstAttribute="top" secondItem="9rt-W7-dq3" secondAttribute="bottom" constant="8" id="E19-ZO-Dxi"/>
+                            <constraint firstItem="GWs-N0-fhF" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="FuN-Qd-xhO"/>
+                            <constraint firstItem="fZq-X8-hzo" firstAttribute="top" secondItem="dTT-rs-nDD" secondAttribute="bottom" constant="8" id="HG9-jl-fOx"/>
+                            <constraint firstItem="dTT-rs-nDD" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="IM8-50-Hji"/>
                             <constraint firstAttribute="trailing" secondItem="uW8-vu-o7H" secondAttribute="trailing" id="IkT-2v-w1T"/>
-                            <constraint firstItem="hLl-cw-Fb0" firstAttribute="top" secondItem="kJy-wQ-Abe" secondAttribute="bottom" constant="8" id="KAC-4m-lnq"/>
+                            <constraint firstItem="Kc9-CB-a5p" firstAttribute="leading" secondItem="Zpw-ru-Ev9" secondAttribute="trailing" constant="12" id="Jrg-IY-nSk"/>
+                            <constraint firstItem="hLl-cw-Fb0" firstAttribute="top" secondItem="kJy-wQ-Abe" secondAttribute="bottom" id="KAC-4m-lnq"/>
+                            <constraint firstItem="dTT-rs-nDD" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="Nc2-9W-55b"/>
+                            <constraint firstItem="Nw0-di-Pf6" firstAttribute="leading" secondItem="aUA-5h-XQ6" secondAttribute="trailing" constant="12" id="OEM-c8-uw2"/>
+                            <constraint firstItem="9rt-W7-dq3" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="QJd-pa-Gep"/>
+                            <constraint firstItem="Zpw-ru-Ev9" firstAttribute="leading" secondItem="GWs-N0-fhF" secondAttribute="trailing" constant="30" id="V4G-et-sKk"/>
                             <constraint firstItem="uW8-vu-o7H" firstAttribute="top" secondItem="hLl-cw-Fb0" secondAttribute="bottom" id="VNT-gG-LNG"/>
-                            <constraint firstItem="DcK-Ri-LQV" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" constant="90" id="XVX-IZ-F2T"/>
+                            <constraint firstItem="aUA-5h-XQ6" firstAttribute="centerY" secondItem="ZSV-cN-huS" secondAttribute="centerY" id="WXi-nd-sIQ"/>
+                            <constraint firstItem="GWs-N0-fhF" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="XcA-Vg-mRk"/>
                             <constraint firstAttribute="trailing" secondItem="kJy-wQ-Abe" secondAttribute="trailing" id="YdI-qr-QdV"/>
+                            <constraint firstItem="7Zx-Lg-OEV" firstAttribute="top" secondItem="GWs-N0-fhF" secondAttribute="bottom" constant="8" id="Yg6-hb-QD9"/>
                             <constraint firstItem="7Zx-Lg-OEV" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="b9C-lH-mbD"/>
-                            <constraint firstItem="7Zx-Lg-OEV" firstAttribute="top" secondItem="DcK-Ri-LQV" secondAttribute="bottom" constant="8" id="e4B-Fg-5s9"/>
+                            <constraint firstItem="fZq-X8-hzo" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="bRY-ez-IKO"/>
+                            <constraint firstItem="ibd-WK-I2R" firstAttribute="centerY" secondItem="Ghi-dv-1si" secondAttribute="centerY" id="ctP-7k-rFg"/>
+                            <constraint firstItem="gPt-0u-U9v" firstAttribute="centerY" secondItem="dTT-rs-nDD" secondAttribute="centerY" id="fee-nv-JLR"/>
+                            <constraint firstItem="ZSV-cN-huS" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" constant="50" id="fzb-5w-OM2"/>
+                            <constraint firstItem="Ghi-dv-1si" firstAttribute="leading" secondItem="9rt-W7-dq3" secondAttribute="trailing" constant="30" id="gpg-T2-vne"/>
+                            <constraint firstItem="fZq-X8-hzo" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="hHv-lP-HR8"/>
                             <constraint firstAttribute="trailing" secondItem="hLl-cw-Fb0" secondAttribute="trailing" id="hTo-WK-LZR"/>
                             <constraint firstItem="VLR-BO-o7S" firstAttribute="top" secondItem="7Zx-Lg-OEV" secondAttribute="bottom" id="j9C-fw-2I2"/>
+                            <constraint firstItem="GWs-N0-fhF" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="kA6-iW-hIr"/>
                             <constraint firstItem="hLl-cw-Fb0" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="lWP-IH-WdT"/>
+                            <constraint firstItem="gPt-0u-U9v" firstAttribute="leading" secondItem="dTT-rs-nDD" secondAttribute="trailing" constant="30" id="o4j-1O-zh3"/>
+                            <constraint firstItem="ZSV-cN-huS" firstAttribute="top" secondItem="uW8-vu-o7H" secondAttribute="bottom" constant="12" id="qsv-Ks-InT"/>
+                            <constraint firstItem="KKc-dJ-pIi" firstAttribute="leading" secondItem="gPt-0u-U9v" secondAttribute="trailing" constant="12" id="rLa-7t-3mS"/>
+                            <constraint firstItem="ibd-WK-I2R" firstAttribute="leading" secondItem="Ghi-dv-1si" secondAttribute="trailing" constant="12" id="rqP-G4-wPs"/>
+                            <constraint firstItem="YIP-fB-1Kl" firstAttribute="centerY" secondItem="fZq-X8-hzo" secondAttribute="centerY" id="sSt-0G-ou1"/>
+                            <constraint firstItem="YIP-fB-1Kl" firstAttribute="leading" secondItem="fZq-X8-hzo" secondAttribute="trailing" constant="30" id="skd-oh-cMO"/>
                             <constraint firstAttribute="trailing" secondItem="7Zx-Lg-OEV" secondAttribute="trailing" id="tSz-ig-BEF"/>
+                            <constraint firstItem="Kbt-u5-A4h" firstAttribute="centerY" secondItem="YIP-fB-1Kl" secondAttribute="centerY" id="tiC-1Y-eGu"/>
+                            <constraint firstItem="9rt-W7-dq3" firstAttribute="top" secondItem="fZq-X8-hzo" secondAttribute="bottom" constant="8" id="vEF-2A-Kbi"/>
                             <constraint firstItem="kJy-wQ-Abe" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="vzZ-Z4-mpN"/>
+                            <constraint firstItem="Kbt-u5-A4h" firstAttribute="leading" secondItem="YIP-fB-1Kl" secondAttribute="trailing" constant="12" id="w19-Ar-TVC"/>
+                            <constraint firstItem="Nw0-di-Pf6" firstAttribute="centerY" secondItem="aUA-5h-XQ6" secondAttribute="centerY" id="xQy-N7-F1Y"/>
                             <constraint firstItem="uW8-vu-o7H" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="y5y-vs-gVI"/>
+                            <constraint firstItem="dTT-rs-nDD" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="yds-Wp-8dZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contact" image="(Unselected) Contact Icon" selectedImage="(Selected) Contact Icon" id="g0I-6E-UdG"/>
                     <connections>
-                        <outletCollection property="textViews" destination="Nw0-di-Pf6" collectionClass="NSMutableArray" id="3fu-A4-Zx4"/>
-                        <outletCollection property="textViews" destination="KKc-dJ-pIi" collectionClass="NSMutableArray" id="j5V-tG-25F"/>
-                        <outletCollection property="textViews" destination="Kbt-u5-A4h" collectionClass="NSMutableArray" id="he0-eg-bTa"/>
-                        <outletCollection property="textViews" destination="ibd-WK-I2R" collectionClass="NSMutableArray" id="XvP-J9-2L3"/>
                         <outletCollection property="textLabels" destination="aUA-5h-XQ6" collectionClass="NSMutableArray" id="kUP-yI-AXH"/>
+                        <outletCollection property="textViews" destination="Nw0-di-Pf6" collectionClass="NSMutableArray" id="3fu-A4-Zx4"/>
                         <outletCollection property="textLabels" destination="gPt-0u-U9v" collectionClass="NSMutableArray" id="1wQ-3M-P50"/>
+                        <outletCollection property="textViews" destination="KKc-dJ-pIi" collectionClass="NSMutableArray" id="j5V-tG-25F"/>
                         <outletCollection property="textLabels" destination="YIP-fB-1Kl" collectionClass="NSMutableArray" id="VlF-W8-iNL"/>
+                        <outletCollection property="textViews" destination="Kbt-u5-A4h" collectionClass="NSMutableArray" id="he0-eg-bTa"/>
                         <outletCollection property="textLabels" destination="Ghi-dv-1si" collectionClass="NSMutableArray" id="dIl-Sv-hpL"/>
+                        <outletCollection property="textViews" destination="ibd-WK-I2R" collectionClass="NSMutableArray" id="XvP-J9-2L3"/>
                         <outletCollection property="textLabels" destination="Zpw-ru-Ev9" collectionClass="NSMutableArray" id="v5v-qn-hRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0r-rm-uqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="662.51874062968523"/>
-        </scene>
-        <!--Gallery-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="GalleryVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eff-oR-rqm" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="5Dc-Sp-QkP"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Gallery" id="6ue-b3-RdL"/>
-                                </items>
-                            </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-le-0DU">
-                                <connections>
-                                    <segue destination="kLT-8A-GV4" kind="embed" identifier="gallaryCollectionViewSegue" id="EsO-Re-HqL"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="TxS-le-0DU" firstAttribute="top" secondItem="eff-oR-rqm" secondAttribute="bottom" id="1PK-OB-aqB"/>
-                            <constraint firstItem="TxS-le-0DU" firstAttribute="bottom" secondItem="QS5-Rx-YEW" secondAttribute="bottom" id="AML-qP-G03"/>
-                            <constraint firstAttribute="trailing" secondItem="eff-oR-rqm" secondAttribute="trailing" id="GxW-fz-MAg"/>
-                            <constraint firstItem="eff-oR-rqm" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Lv4-UE-r1O"/>
-                            <constraint firstItem="eff-oR-rqm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="MJv-uT-GOm"/>
-                            <constraint firstItem="TxS-le-0DU" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="ex5-Xz-N9Q"/>
-                            <constraint firstAttribute="trailing" secondItem="TxS-le-0DU" secondAttribute="trailing" id="iHI-DU-AlY"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" image="(Unselected) Gallary Icon" selectedImage="(Selected) Gallary Icon" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-316" y="663"/>
+            <point key="canvasLocation" x="1581.5999999999999" y="661.61919040479768"/>
         </scene>
         <!--Home-->
         <scene sceneID="d30-AH-i5G">
@@ -378,7 +338,7 @@ Contact Information</string>
                     </tabBar>
                     <connections>
                         <segue destination="61g-jM-hUy" kind="relationship" relationship="viewControllers" id="ccf-Ot-K6C"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="tY1-Qx-8sN" kind="relationship" relationship="viewControllers" id="rPC-4a-0XI"/>
                         <segue destination="Mpa-A2-k2d" kind="relationship" relationship="viewControllers" id="JJA-PX-K3d"/>
                         <segue destination="p1s-5I-wKy" kind="relationship" relationship="viewControllers" id="vfx-Jx-xHw"/>
                     </connections>
@@ -387,12 +347,12 @@ Contact Information</string>
             </objects>
             <point key="canvasLocation" x="4" y="-96"/>
         </scene>
-        <!--GalleryCVC-->
+        <!--Gallery-->
         <scene sceneID="kLj-Qj-FHd">
             <objects>
                 <collectionViewController id="kLT-8A-GV4" customClass="GalleryCVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Ggy-Ip-juS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="AEF-mY-ic3">
@@ -403,7 +363,7 @@ Contact Information</string>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="gallaryCollectionCell" id="0RT-OI-j0g" customClass="GalleryCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <rect key="frame" x="72.5" y="0.0" width="230" height="276"/>
+                                <rect key="frame" x="73" y="0.0" width="230" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="230" height="276"/>
@@ -452,6 +412,7 @@ Contact Information</string>
                                     <outlet property="detailView" destination="aZt-C5-Uh1" id="ci0-wT-CGC"/>
                                     <outlet property="imageView" destination="1ny-wI-dN3" id="GYb-Bz-HYi"/>
                                     <outlet property="titleLabel" destination="gk2-en-lAU" id="XXC-Pb-laj"/>
+                                    <segue destination="Vls-zk-7qX" kind="show" identifier="pageViewSegue" id="5sE-p4-dRt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -460,18 +421,66 @@ Contact Information</string>
                             <outlet property="delegate" destination="kLT-8A-GV4" id="We2-I7-WzA"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Gallery" id="8U8-X8-etG"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Spa-bp-Drc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="1395"/>
+            <point key="canvasLocation" x="-371" y="1455"/>
         </scene>
-        <!--Page View Controller-->
+        <!--GalleryPVC-->
         <scene sceneID="Fci-8p-l3q">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Vls-zk-7qX" sceneMemberID="viewController"/>
+                <pageViewController transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Vls-zk-7qX" customClass="GalleryPVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6n-Ev-CF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="2109"/>
+            <point key="canvasLocation" x="-372" y="2169"/>
+        </scene>
+        <!--Gallery DisplayVC-->
+        <scene sceneID="zKs-VS-MMu">
+            <objects>
+                <viewController storyboardIdentifier="GalleryDisplayVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SUy-6h-xGz" customClass="GalleryDisplayVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkD-uJ-Eil"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Im-dd-8dv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oxx-lE-dWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinapples" translatesAutoresizingMaskIntoConstraints="NO" id="oWO-jL-7ab"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqR-hG-FPv">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Lrh-U9-b3J">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinapples" translatesAutoresizingMaskIntoConstraints="NO" id="uiU-ed-vE2">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oWO-jL-7ab" firstAttribute="leading" secondItem="oxx-lE-dWZ" secondAttribute="leading" id="1EK-4Z-as6"/>
+                            <constraint firstItem="vqR-hG-FPv" firstAttribute="leading" secondItem="oxx-lE-dWZ" secondAttribute="leading" id="4g5-LY-Hl9"/>
+                            <constraint firstItem="uiU-ed-vE2" firstAttribute="top" secondItem="oxx-lE-dWZ" secondAttribute="top" id="KFy-hA-kfU"/>
+                            <constraint firstItem="vqR-hG-FPv" firstAttribute="top" secondItem="oxx-lE-dWZ" secondAttribute="top" id="OtI-nO-QyV"/>
+                            <constraint firstItem="1Im-dd-8dv" firstAttribute="top" secondItem="vqR-hG-FPv" secondAttribute="bottom" id="SMG-4a-bbT"/>
+                            <constraint firstAttribute="trailing" secondItem="uiU-ed-vE2" secondAttribute="trailing" id="T8Z-xa-dpT"/>
+                            <constraint firstItem="1Im-dd-8dv" firstAttribute="top" secondItem="oWO-jL-7ab" secondAttribute="bottom" id="Wsq-R2-HmB"/>
+                            <constraint firstAttribute="trailing" secondItem="vqR-hG-FPv" secondAttribute="trailing" id="Xmh-XH-bp9"/>
+                            <constraint firstItem="1Im-dd-8dv" firstAttribute="top" secondItem="uiU-ed-vE2" secondAttribute="bottom" id="dg4-RY-ri5"/>
+                            <constraint firstAttribute="trailing" secondItem="oWO-jL-7ab" secondAttribute="trailing" id="gIJ-lU-JtP"/>
+                            <constraint firstItem="oWO-jL-7ab" firstAttribute="top" secondItem="oxx-lE-dWZ" secondAttribute="top" id="suo-N9-WHs"/>
+                            <constraint firstItem="uiU-ed-vE2" firstAttribute="leading" secondItem="oxx-lE-dWZ" secondAttribute="leading" id="tN8-rU-soc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="uiU-ed-vE2" id="XZ1-A8-2FL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCL-sQ-zX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370.39999999999998" y="2820.5397301349326"/>
         </scene>
         <!--Home-->
         <scene sceneID="Vl0-sT-wPX">
@@ -493,6 +502,29 @@ Contact Information</string>
             </objects>
             <point key="canvasLocation" x="-985" y="663"/>
         </scene>
+        <!--Gallery-->
+        <scene sceneID="HWl-uW-qe7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tY1-Qx-8sN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gallery" image="(Unselected) Gallary Icon" selectedImage="(Selected) Gallary Icon" id="szK-Ol-79h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SD3-F7-s88" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kLT-8A-GV4" kind="relationship" relationship="rootViewController" id="ZXq-4c-kYs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFz-eq-nbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="663"/>
+        </scene>
     </scenes>
     <resources>
         <image name="(Selected) Contact Icon" width="30" height="30"/>
@@ -506,6 +538,7 @@ Contact Information</string>
         <image name="Address Icon" width="30" height="30"/>
         <image name="Email Icon" width="30" height="30"/>
         <image name="Phone Icon" width="29" height="30"/>
+        <image name="Pinapples" width="948" height="1685"/>
         <image name="Social Media" width="30" height="30"/>
         <image name="Website Icon" width="30" height="30"/>
         <image name="img1" width="1648" height="1648"/>
