@@ -22,6 +22,17 @@ class NavigationBar: UINavigationBar, ShadowHideable, UIBarPositioningDelegate {
     
     let gradient: CAGradientLayer = CAGradientLayer()
     
+    override func awakeFromNib() {
+         super.awakeFromNib()
+        
+        let font = UIFont(name: "AvenirNextCondensed-Regular", size: 24)!
+        titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white]
+        items?.first?.leftBarButtonItem?.tintColor = UIColor.white
+        
+        tintColor = UIColor.white
+        
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         

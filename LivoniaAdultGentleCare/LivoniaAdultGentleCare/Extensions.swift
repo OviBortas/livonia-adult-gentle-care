@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension Optional {
+
+    func zz(_ path: String = #file, _ function: String = #function, _ line: Int = #line) -> Optional {
+        
+        if self == nil {
+            print("IM Nil!")
+            let file = String(String(path.characters.reversed()).components(separatedBy: "/").first!.characters.reversed())
+            print("returning nil instead of \(type(of: self)), file: \(file), func: \(function), line: \(line)")
+            return .none
+        }
+        
+        return self
+    }
+}
+
 // returns nil along with a message describing where the return occures
 func nilMessage<T>(_ path: String = #file, _ function: String = #function, _ line: Int = #line) -> T? {
     /*
@@ -17,8 +32,42 @@ func nilMessage<T>(_ path: String = #file, _ function: String = #function, _ lin
     let file = String(String(path.characters.reversed()).components(separatedBy: "/").first!.characters.reversed())
     
     print("returning nil instead of \(T.self), file: \(file), func: \(function), line: \(line)")
+    
     return nil
 }
+
+// returns nil along with a message describing where the return occures
+func nilMessage<T>(_ type: T, _ path: String = #file, _ function: String = #function, _ line: Int = #line) -> () {
+    /*
+     Reverse the string and trim it to the first occurance of "/"
+     then reverse the string back to normal
+     */
+    print("ITS ME")
+    let file = String(String(path.characters.reversed()).components(separatedBy: "/").first!.characters.reversed())
+    
+    print("returning nil instead of \(type(of: type)), file: \(file), func: \(function), line: \(line)")
+    return ()
+}
+
+func checkNil<T>(_ type: T?, _ path: String = #file, _ function: String = #function, _ line: Int = #line) -> T? {
+    /*
+     Reverse the string and trim it to the first occurance of "/"
+     then reverse the string back to normal
+     */
+    if type == nil {
+        print("ITS ME")
+        let file = String(String(path.characters.reversed()).components(separatedBy: "/").first!.characters.reversed())
+        
+        print("returning nil instead of \(T.self), file: \(file), func: \(function), line: \(line)")
+        
+        return nil
+    }
+    
+    return type
+}
+
+
+
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {

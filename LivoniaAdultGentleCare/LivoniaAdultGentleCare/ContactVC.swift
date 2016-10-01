@@ -14,16 +14,6 @@ class ContactVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        textViews.forEach { (textView) in
-            textView.textContainerInset = UIEdgeInsets(top: 2, left: 0, bottom: 0, right: 0)
-        }
-        
-//        textLabels.forEach { (label) in
-//            label.baselineAdjustment = .alignBaselines
-//        }
         
     }
 

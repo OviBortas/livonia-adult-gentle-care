@@ -28,7 +28,6 @@ class HomePVC: UIPageViewController, UIPageViewControllerDelegate, UIPageViewCon
         delegate = self
         dataSource = self
 
-        
         guard let startVC = viewControllerAtIndex(0) else { return }
         let viewControllers = [startVC]
         
@@ -59,16 +58,5 @@ class HomePVC: UIPageViewController, UIPageViewControllerDelegate, UIPageViewCon
         return viewControllerAtIndex(index)
     }
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
