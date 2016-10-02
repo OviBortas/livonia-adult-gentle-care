@@ -12,6 +12,8 @@
 		EF345D791D976C650029BD4B /* ShadowHideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D781D976C650029BD4B /* ShadowHideable.swift */; };
 		EF345D7B1D987CBC0029BD4B /* HomePVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D7A1D987CBC0029BD4B /* HomePVC.swift */; };
 		EF345D7D1D987F2B0029BD4B /* HomeDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D7C1D987F2B0029BD4B /* HomeDisplayModel.swift */; };
+		EF5EEC1A1DA0A19300462E10 /* GalleryDisplayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EEC191DA0A19300462E10 /* GalleryDisplayCVC.swift */; };
+		EF5EEC1C1DA0A48600462E10 /* GalleryDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EEC1B1DA0A48600462E10 /* GalleryDisplayCell.swift */; };
 		EF6A9AA01D9B38F0009B2768 /* GalleryPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A9A9F1D9B38F0009B2768 /* GalleryPVC.swift */; };
 		EF6A9AA21D9B3AE4009B2768 /* GalleryDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A9AA11D9B3AE4009B2768 /* GalleryDisplayModel.swift */; };
 		EF6A9AA41D9B44EC009B2768 /* GalleryDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A9AA31D9B44EC009B2768 /* GalleryDisplayVC.swift */; };
@@ -56,6 +58,8 @@
 		EF345D781D976C650029BD4B /* ShadowHideable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowHideable.swift; sourceTree = "<group>"; };
 		EF345D7A1D987CBC0029BD4B /* HomePVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePVC.swift; sourceTree = "<group>"; };
 		EF345D7C1D987F2B0029BD4B /* HomeDisplayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayModel.swift; sourceTree = "<group>"; };
+		EF5EEC191DA0A19300462E10 /* GalleryDisplayCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayCVC.swift; sourceTree = "<group>"; };
+		EF5EEC1B1DA0A48600462E10 /* GalleryDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayCell.swift; sourceTree = "<group>"; };
 		EF6A9A9F1D9B38F0009B2768 /* GalleryPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPVC.swift; sourceTree = "<group>"; };
 		EF6A9AA11D9B3AE4009B2768 /* GalleryDisplayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayModel.swift; sourceTree = "<group>"; };
 		EF6A9AA31D9B44EC009B2768 /* GalleryDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayVC.swift; sourceTree = "<group>"; };
@@ -186,9 +190,11 @@
 				EFAB47371D8DB93D00F78BF0 /* NewsVC.swift */,
 				EFAB47391D8DB94700F78BF0 /* ContactVC.swift */,
 				EFF514221D9207FD001F5B41 /* GalleryCVC.swift */,
+				EFF514201D9207C8001F5B41 /* GalleryCell.swift */,
+				EF5EEC191DA0A19300462E10 /* GalleryDisplayCVC.swift */,
+				EF5EEC1B1DA0A48600462E10 /* GalleryDisplayCell.swift */,
 				EF6A9A9F1D9B38F0009B2768 /* GalleryPVC.swift */,
 				EF6A9AA31D9B44EC009B2768 /* GalleryDisplayVC.swift */,
-				EFF514201D9207C8001F5B41 /* GalleryCell.swift */,
 				EFF5141C1D91F977001F5B41 /* TabBarController.swift */,
 				EFF514241D92173F001F5B41 /* TabBarItem.swift */,
 			);
@@ -370,9 +376,11 @@
 				EF6A9AA41D9B44EC009B2768 /* GalleryDisplayVC.swift in Sources */,
 				EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */,
 				EFF5141D1D91F977001F5B41 /* TabBarController.swift in Sources */,
+				EF5EEC1A1DA0A19300462E10 /* GalleryDisplayCVC.swift in Sources */,
 				EF345D771D9726AF0029BD4B /* Extensions.swift in Sources */,
 				EFAB47341D8DB91200F78BF0 /* HomeVC.swift in Sources */,
 				EF345D751D96E3030029BD4B /* GalleryModel.swift in Sources */,
+				EF5EEC1C1DA0A48600462E10 /* GalleryDisplayCell.swift in Sources */,
 				EFAB473A1D8DB94700F78BF0 /* ContactVC.swift in Sources */,
 				EFF514231D9207FD001F5B41 /* GalleryCVC.swift in Sources */,
 			);

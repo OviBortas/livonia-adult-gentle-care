@@ -1,5 +1,5 @@
 //
-//  GalleryDisplayVC.swift
+//  GalleryDisplayCVC.swift
 //  LivoniaAdultGentleCare
 //
 //  Created by Ovidiu Bortas on 9/27/16.
@@ -19,6 +19,7 @@ class GalleryDisplayVC: UIViewController {
         super.viewDidLoad()
         
         imgView.image = UIImage(named: imgName)
+        
 
         // Do any additional setup after loading the view.
     }

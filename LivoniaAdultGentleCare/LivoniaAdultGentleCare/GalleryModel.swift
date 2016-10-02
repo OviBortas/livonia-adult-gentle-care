@@ -19,7 +19,7 @@ class GalleryModel {
     let data: [GalleryData] = {
         
         // set the names of the pictures associated with the item
-        let picNames = ["Island", "img1", "Island"]
+        let picNames = ["Island", "img1", "Island", "Pinapples"]
         let item1 = GalleryData(title: "First", displayImg: UIImage(named: "Pinapples")!, imgNames: picNames)
         
         

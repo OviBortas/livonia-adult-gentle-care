@@ -41,16 +41,15 @@ class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfall
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "pageViewSegue" {
-            let vc = segue.destination as! GalleryPVC
+        if segue.identifier == "imgDisplaySegue" {
+            print("YES")
+            let vc = segue.destination as! GalleryDisplayCVC
             
             // get the cell index the user selected
             guard let index = collectionView?.indexPathsForSelectedItems?.first?.row else { return }
 
             vc.imgNames = model.data[index].imgNames
             vc.title = model.data[index].title
-            
-            
         }
     }
     
