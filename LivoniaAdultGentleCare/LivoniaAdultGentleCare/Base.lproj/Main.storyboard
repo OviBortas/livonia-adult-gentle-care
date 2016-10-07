@@ -451,41 +451,33 @@ Livonia MI, 48152</string>
             </objects>
             <point key="canvasLocation" x="-371" y="1455"/>
         </scene>
-        <!--GalleryPVC-->
-        <scene sceneID="Fci-8p-l3q">
-            <objects>
-                <pageViewController transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Vls-zk-7qX" customClass="GalleryPVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h6n-Ev-CF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-372" y="2169"/>
-        </scene>
         <!--Gallery DisplayCVC-->
         <scene sceneID="0iu-vW-xlP">
             <objects>
                 <collectionViewController id="is2-w4-R1z" customClass="GalleryDisplayCVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="q04-ti-boW">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="q04-ti-boW">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="eGz-IQ-Nad">
-                            <size key="itemSize" width="375" height="554"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mBC-8h-ddW">
+                            <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="galleryDisplayCell" id="d9L-WN-Gxs" customClass="GalleryDisplayCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinapples" translatesAutoresizingMaskIntoConstraints="NO" id="UKd-tT-aVp"/>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="UKd-tT-aVp" secondAttribute="trailing" id="nvL-eP-BCB"/>
+                                    <constraint firstItem="UKd-tT-aVp" firstAttribute="trailing" secondItem="d9L-WN-Gxs" secondAttribute="trailing" id="rjw-x0-Brz"/>
                                     <constraint firstItem="UKd-tT-aVp" firstAttribute="centerY" secondItem="d9L-WN-Gxs" secondAttribute="centerY" constant="-40" id="t0e-1o-1es"/>
                                     <constraint firstItem="UKd-tT-aVp" firstAttribute="leading" secondItem="d9L-WN-Gxs" secondAttribute="leading" id="wmQ-Qn-qOU"/>
                                 </constraints>
@@ -502,53 +494,7 @@ Livonia MI, 48152</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iad-q1-JsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306.39999999999998" y="2168.3658170914546"/>
-        </scene>
-        <!--Gallery DisplayVC-->
-        <scene sceneID="zKs-VS-MMu">
-            <objects>
-                <viewController storyboardIdentifier="GalleryDisplayVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SUy-6h-xGz" customClass="GalleryDisplayVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pkD-uJ-Eil"/>
-                        <viewControllerLayoutGuide type="bottom" id="1Im-dd-8dv"/>
-                    </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="oxx-lE-dWZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinapples" translatesAutoresizingMaskIntoConstraints="NO" id="oWO-jL-7ab"/>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqR-hG-FPv">
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Lrh-U9-b3J">
-                                    <frame key="frameInset"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinapples" translatesAutoresizingMaskIntoConstraints="NO" id="uiU-ed-vE2">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="oWO-jL-7ab" firstAttribute="leading" secondItem="oxx-lE-dWZ" secondAttribute="leading" id="1EK-4Z-as6"/>
-                            <constraint firstItem="vqR-hG-FPv" firstAttribute="leading" secondItem="oxx-lE-dWZ" secondAttribute="leading" id="4g5-LY-Hl9"/>
-                            <constraint firstItem="vqR-hG-FPv" firstAttribute="top" secondItem="oxx-lE-dWZ" secondAttribute="top" id="OtI-nO-QyV"/>
-                            <constraint firstItem="1Im-dd-8dv" firstAttribute="top" secondItem="vqR-hG-FPv" secondAttribute="bottom" id="SMG-4a-bbT"/>
-                            <constraint firstAttribute="trailing" secondItem="uiU-ed-vE2" secondAttribute="trailing" id="T8Z-xa-dpT"/>
-                            <constraint firstItem="1Im-dd-8dv" firstAttribute="top" secondItem="oWO-jL-7ab" secondAttribute="bottom" id="Wsq-R2-HmB"/>
-                            <constraint firstAttribute="trailing" secondItem="vqR-hG-FPv" secondAttribute="trailing" id="Xmh-XH-bp9"/>
-                            <constraint firstItem="uiU-ed-vE2" firstAttribute="centerY" secondItem="oxx-lE-dWZ" secondAttribute="centerY" constant="-40" id="cxc-ZG-Bwa"/>
-                            <constraint firstAttribute="trailing" secondItem="oWO-jL-7ab" secondAttribute="trailing" id="gIJ-lU-JtP"/>
-                            <constraint firstItem="oWO-jL-7ab" firstAttribute="top" secondItem="oxx-lE-dWZ" secondAttribute="top" id="suo-N9-WHs"/>
-                            <constraint firstItem="uiU-ed-vE2" firstAttribute="leading" secondItem="oxx-lE-dWZ" secondAttribute="leading" id="tN8-rU-soc"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imgView" destination="uiU-ed-vE2" id="XZ1-A8-2FL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RCL-sQ-zX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-370.39999999999998" y="2820.5397301349326"/>
+            <point key="canvasLocation" x="-372" y="2214.2428785607199"/>
         </scene>
         <!--Home-->
         <scene sceneID="Vl0-sT-wPX">

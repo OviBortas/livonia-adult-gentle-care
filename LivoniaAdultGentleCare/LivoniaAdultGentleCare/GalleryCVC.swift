@@ -42,7 +42,6 @@ class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfall
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "imgDisplaySegue" {
-            print("YES")
             let vc = segue.destination as! GalleryDisplayCVC
             
             // get the cell index the user selected

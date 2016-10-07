@@ -16,8 +16,12 @@ class GalleryDisplayCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.translatesAutoresizingMaskIntoConstraints = true
+        
         //imgView.image = UIImage(named: imgName)
     }
+
     
 //    override func layoutSubviews() {
 //        super.layoutSubviews()
