@@ -18,6 +18,63 @@ class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfall
         super.viewDidLoad()
         
         setupLayout()
+}
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        animateCollection()
+    }
+    
+    func animateCollection() {
+        
+        collectionView?.performBatchUpdates( { self.performAnimation(direction: .vertical) }, completion: nil)
+    }
+    
+    enum AnimationDirection {
+        case horizontal
+        case vertical
+    }
+    
+    fileprivate func performAnimation(direction: AnimationDirection) {
+        self.collectionView?.reloadData()
+        
+        guard let cells = self.collectionView?.visibleCells,
+            let collectionViewHeight = self.collectionView?.bounds.size.height,
+            let collectionViewWidth = self.collectionView?.bounds.size.width else {
+            print("could not unwrap data \(#line)")
+            return
+        }
+        
+        if direction == .horizontal {
+            for cell in cells {
+                if cell.tag == 0 { // lhs
+                    cell.transform = CGAffineTransform(translationX: collectionViewWidth.negated(), y: 0)
+                }
+                else if cell.tag == 1 { // rhs
+                    cell.transform = CGAffineTransform(translationX: collectionViewWidth, y: 0)
+                }
+                else if cell.tag % 2 == 0 { // rhs
+                    cell.transform = CGAffineTransform(translationX: collectionViewWidth, y: 0)
+                }
+                else { // lhs
+                    cell.transform = CGAffineTransform(translationX: collectionViewWidth.negated(), y: 0)
+                }
+            }
+        }
+        else if direction == .vertical {
+            for cell in cells {
+                cell.transform = CGAffineTransform(translationX: 0, y: collectionViewHeight)
+            }
+        }
+        
+        var delayCounter: Double = 0.0
+        for cell in cells {
+            UIView.animate(withDuration: 1.25, delay: delayCounter * 0.05, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: [.curveEaseOut, .allowUserInteraction], animations: {
+                cell.transform = CGAffineTransform.identity
+                }, completion: nil)
+            delayCounter += 1
+        }
     }
     
     func setupLayout() {
@@ -46,7 +103,7 @@ class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfall
             
             // get the cell index the user selected
             guard let index = collectionView?.indexPathsForSelectedItems?.first?.row else { return }
-
+            
             vc.imgNames = model.data[index].imgNames
             vc.title = model.data[index].title
         }
@@ -72,7 +129,8 @@ class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfall
         // Configure the cell
         
         cell.imageView.image = model.data[indexPath.row].displayImg
-        cell.titleLabel.text = model.data[indexPath.row].title
+        cell.titleLabel.text = model.data[indexPath.row].title + " \(indexPath.item)"
+        cell.tag = indexPath.item
         
         if indexPath.row == model.data.count - 1 {
             cell.detailView.isHidden = true
@@ -94,7 +152,6 @@ class GalleryCVC: UICollectionViewController, CHTCollectionViewDelegateWaterfall
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(model.data[indexPath.row].title)
     }
     
     /*

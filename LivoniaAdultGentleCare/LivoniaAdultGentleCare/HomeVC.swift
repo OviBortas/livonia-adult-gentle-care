@@ -34,15 +34,11 @@ class HomeVC: UIViewController {
         labelLine.layer.shadowColor = labelLine.backgroundColor?.withAlphaComponent(0.8).cgColor
         labelLine.layer.shadowOffset = CGSize(width: 0, height: 0)
         labelLine.layer.shadowOpacity = 1.0
-    
-        
-        
     }
 }
 
-
-
-
+// Class that draws a triangle
+// It is used to make the HomeVC ImageView look like it is croped on an triangular angle
 class View: UIView {
     override func draw(_ rect: CGRect) {
         let ctx = UIGraphicsGetCurrentContext()

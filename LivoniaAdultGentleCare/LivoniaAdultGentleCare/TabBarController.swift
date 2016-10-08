@@ -8,13 +8,25 @@
 
 import UIKit
 
-class TabBarController: UITabBarController, ShadowHideable {
+class TabBarController: UITabBarController, UITabBarControllerDelegate, ShadowHideable {
     var isShadowLineHidden: Bool = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        delegate = self
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         hideShadowLine()
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if viewController.isKind(of: UINavigationController.self) {
+            (viewController as! UINavigationController).popToRootViewController(animated: false)
+        }
+    }
+    
 }
 
 class NavigationBar: UINavigationBar, ShadowHideable, UIBarPositioningDelegate {

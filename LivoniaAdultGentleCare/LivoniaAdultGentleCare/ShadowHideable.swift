@@ -17,14 +17,10 @@ extension ShadowHideable where Self: UITabBarController {
     
     func hideShadowLine() {
         if isShadowLineHidden == false {
-            for view in tabBar.subviews {
-                if "\(type(of: view))" == "_UIBarBackground" {
-                    for subview in view.subviews {
-                        if subview.isKind(of: UIImageView.self) {
-                            subview.isHidden = true
-                            isShadowLineHidden = true
-                        }
-                    }
+            for view in tabBar.subviews where view.isType(of: "_UIBarBackground") {
+                for subview in view.subviews where subview.isKind(of: UIImageView.self) {
+                    subview.isHidden = true
+                    isShadowLineHidden = true
                 }
             }
         }
@@ -33,35 +29,16 @@ extension ShadowHideable where Self: UITabBarController {
 
 extension ShadowHideable where Self: UINavigationBar {
     
-        func hideShadowLine() {
-    
-            if isShadowLineHidden == false {
-                for view in subviews {
-                    if "\(type(of: view))" == "_UIBarBackground" {
-                        for subview in view.subviews {
-                            if subview.isKind(of: UIImageView.self) {
-                                subview.isHidden = true
-                                isShadowLineHidden = true
-                            }
-                        }
-                    }
+    func hideShadowLine() {
+        if isShadowLineHidden == false {
+            for view in subviews where view.isType(of: "_UIBarBackground") {
+                for subview in view.subviews where subview.isKind(of: UIImageView.self) {
+                    subview.isHidden = true
+                    isShadowLineHidden = true
                 }
             }
         }
-    
-    
-//    func hideShadowLine() {
-//        
-//        if isShadowLineHidden == false {
-//            for view in subviews where view.isType(of: "_UIBarBackground") {
-//                for subview in view.subviews where subview.isKind(of: UIImageView.self) {
-//                    subview.isHidden = true
-//                    isShadowLineHidden = true
-//                }
-//            }
-//        }
-//    }
-
+    }
 }
 
 

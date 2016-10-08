@@ -36,7 +36,7 @@ class PageControlView: UIView, PageControlViewDelegate {
             
             hView.setNeedsLayout()
             
-            UIView.animate(withDuration: 0.1, delay: 0.0, options: [.beginFromCurrentState, .curveEaseIn], animations: {
+            UIView.animate(withDuration: 0.15, delay: 0.0, options: [.beginFromCurrentState, .curveEaseInOut], animations: {
                 self.layoutIfNeeded()
                 }, completion: nil )
 
@@ -48,6 +48,7 @@ class PageControlView: UIView, PageControlViewDelegate {
     fileprivate let imgHeight: CGFloat = 50.0
     
     fileprivate var hView: UIView!
+    fileprivate let hViewHeight: CGFloat = 4.0
     
     fileprivate var horizontalBarLeftAnchorConstraint: NSLayoutConstraint!
     
@@ -117,15 +118,17 @@ class PageControlView: UIView, PageControlViewDelegate {
         
         // Setup horizontal line under StackView
         hView = UIView(frame: .zero)
-        hView.backgroundColor = .blue
+        hView.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         superview!.addSubview(hView)
         
         hView.translatesAutoresizingMaskIntoConstraints = false
         horizontalBarLeftAnchorConstraint = hView.leftAnchor.constraint(equalTo: stackView.leftAnchor)
         horizontalBarLeftAnchorConstraint.isActive = true
-        hView.heightAnchor.constraint(equalToConstant: 4.0).isActive = true
+        hView.heightAnchor.constraint(equalToConstant: hViewHeight).isActive = true
         hView.widthAnchor.constraint(equalToConstant: imgHeight).isActive = true
         hView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 4.0).isActive = true
+        
+        hView.layer.cornerRadius = hViewHeight / 2.0
     }
     
     @objc fileprivate func imgTappeded(_ sender: UIButton) { // need @objc becuase of fileprvate

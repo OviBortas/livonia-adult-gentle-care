@@ -18,10 +18,13 @@ class GalleryDisplayCVC: UICollectionViewController, PageControlViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        automaticallyAdjustsScrollViewInsets = false
+        
         pageC = PageControlView(imgNames: imgNames)
         view.addSubview(pageC)
         pageC.delegate = self
     }
+
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items

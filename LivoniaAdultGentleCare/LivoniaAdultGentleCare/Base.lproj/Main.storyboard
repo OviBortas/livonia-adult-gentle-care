@@ -20,7 +20,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-so-gMV">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="209" id="hGI-Fv-tTR"/>
+                                    <constraint firstAttribute="height" constant="260" id="hGI-Fv-tTR"/>
                                 </constraints>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pw9-4T-Ml0" customClass="View" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wi-fU-b7w">
-                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hYs-n9-mcH"/>
                                     <constraint firstAttribute="height" constant="4" id="tNN-64-mak"/>
@@ -127,8 +127,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-wQ-Abe" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-wQ-Abe" customClass="NavigationBar" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="1M3-pj-3VU"/>
                                 </constraints>
@@ -136,30 +135,29 @@
                                     <navigationItem title="Contact Us" id="PgA-xR-NlD"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="gPc-IN-SlN"/>
+                                </constraints>
                                 <string key="text">Livonia Adult Care
 Contact Information</string>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-vu-o7H" userLabel="ShadowLine">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-vu-o7H" userLabel="ShadowLine">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zi2-95-XEU"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Phone Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-cN-huS">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-cN-huS">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="oHQ-Ra-n3u"/>
                                     <constraint firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="uHD-R5-Rht"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-5h-XQ6">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-5h-XQ6">
                                 <attributedString key="attributedText">
                                     <fragment content="Phone:">
                                         <attributes>
@@ -171,17 +169,13 @@ Contact Information</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(248) 514-0772" translatesAutoresizingMaskIntoConstraints="NO" id="Nw0-di-Pf6">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="(248) 514-0772" translatesAutoresizingMaskIntoConstraints="NO" id="Nw0-di-Pf6">
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Address Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-rs-nDD">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPt-0u-U9v">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Address Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-rs-nDD"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPt-0u-U9v">
                                 <attributedString key="attributedText">
                                     <fragment content="Address:">
                                         <attributes>
@@ -192,20 +186,16 @@ Contact Information</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-dJ-pIi">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-dJ-pIi">
                                 <string key="text">29043 Dardanella St.
 Livonia MI, 48152</string>
-                                <color key="textColor" red="0.0" green="0.48765313625335693" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <dataDetectorType key="dataDetectorTypes" address="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Email Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fZq-X8-hzo">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-fB-1Kl">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fZq-X8-hzo"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-fB-1Kl">
                                 <attributedString key="attributedText">
                                     <fragment content="Email:">
                                         <attributes>
@@ -216,17 +206,13 @@ Livonia MI, 48152</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="ciobanuzamfira@yahoo.com" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-u5-A4h">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="ciobanuzamfira@yahoo.com" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-u5-A4h">
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Website Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-W7-dq3">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghi-dv-1si">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Website Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-W7-dq3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghi-dv-1si">
                                 <attributedString key="attributedText">
                                     <fragment content="Website:">
                                         <attributes>
@@ -237,17 +223,13 @@ Livonia MI, 48152</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="www.lagc.com" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-WK-I2R">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="www.lagc.com" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-WK-I2R">
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Social Media" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-N0-fhF">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpw-ru-Ev9">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Social Media" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-N0-fhF"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpw-ru-Ev9">
                                 <attributedString key="attributedText">
                                     <fragment content="Social:">
                                         <attributes>
@@ -258,11 +240,8 @@ Livonia MI, 48152</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-Lg-OEV">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Social Images" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-CB-a5p">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-Lg-OEV"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Social Images" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-CB-a5p">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -294,13 +273,13 @@ Livonia MI, 48152</string>
                             <constraint firstItem="uW8-vu-o7H" firstAttribute="top" secondItem="hLl-cw-Fb0" secondAttribute="bottom" id="VNT-gG-LNG"/>
                             <constraint firstItem="aUA-5h-XQ6" firstAttribute="centerY" secondItem="ZSV-cN-huS" secondAttribute="centerY" id="WXi-nd-sIQ"/>
                             <constraint firstItem="GWs-N0-fhF" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="XcA-Vg-mRk"/>
-                            <constraint firstAttribute="trailing" secondItem="kJy-wQ-Abe" secondAttribute="trailing" id="YdI-qr-QdV"/>
+                            <constraint firstItem="kJy-wQ-Abe" firstAttribute="trailing" secondItem="VCc-VH-8v9" secondAttribute="trailing" id="YdI-qr-QdV"/>
                             <constraint firstItem="7Zx-Lg-OEV" firstAttribute="top" secondItem="GWs-N0-fhF" secondAttribute="bottom" constant="8" id="Yg6-hb-QD9"/>
                             <constraint firstItem="7Zx-Lg-OEV" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="b9C-lH-mbD"/>
                             <constraint firstItem="fZq-X8-hzo" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="bRY-ez-IKO"/>
                             <constraint firstItem="ibd-WK-I2R" firstAttribute="centerY" secondItem="Ghi-dv-1si" secondAttribute="centerY" id="ctP-7k-rFg"/>
                             <constraint firstItem="gPt-0u-U9v" firstAttribute="centerY" secondItem="dTT-rs-nDD" secondAttribute="centerY" id="fee-nv-JLR"/>
-                            <constraint firstItem="ZSV-cN-huS" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" constant="50" id="fzb-5w-OM2"/>
+                            <constraint firstItem="ZSV-cN-huS" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" constant="50" identifier="PhoneLeadingAnchor" id="fzb-5w-OM2"/>
                             <constraint firstItem="Ghi-dv-1si" firstAttribute="leading" secondItem="9rt-W7-dq3" secondAttribute="trailing" constant="30" id="gpg-T2-vne"/>
                             <constraint firstItem="fZq-X8-hzo" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="hHv-lP-HR8"/>
                             <constraint firstAttribute="trailing" secondItem="hLl-cw-Fb0" secondAttribute="trailing" id="hTo-WK-LZR"/>
@@ -460,26 +439,26 @@ Livonia MI, 48152</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mBC-8h-ddW">
-                            <size key="itemSize" width="100" height="100"/>
+                            <size key="itemSize" width="300" height="300"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="galleryDisplayCell" id="d9L-WN-Gxs" customClass="GalleryDisplayCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="127" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinapples" translatesAutoresizingMaskIntoConstraints="NO" id="UKd-tT-aVp"/>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="UKd-tT-aVp" firstAttribute="centerY" secondItem="d9L-WN-Gxs" secondAttribute="centerY" constant="-40" id="bCu-tf-YuA"/>
+                                    <constraint firstItem="UKd-tT-aVp" firstAttribute="leading" secondItem="d9L-WN-Gxs" secondAttribute="leading" id="ceo-jG-62u"/>
                                     <constraint firstItem="UKd-tT-aVp" firstAttribute="trailing" secondItem="d9L-WN-Gxs" secondAttribute="trailing" id="rjw-x0-Brz"/>
-                                    <constraint firstItem="UKd-tT-aVp" firstAttribute="centerY" secondItem="d9L-WN-Gxs" secondAttribute="centerY" constant="-40" id="t0e-1o-1es"/>
-                                    <constraint firstItem="UKd-tT-aVp" firstAttribute="leading" secondItem="d9L-WN-Gxs" secondAttribute="leading" id="wmQ-Qn-qOU"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imgView" destination="UKd-tT-aVp" id="e50-33-8as"/>
