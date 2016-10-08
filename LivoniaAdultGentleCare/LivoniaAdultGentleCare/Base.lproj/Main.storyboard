@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,23 +98,58 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="PMQ-i5-Ram"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="News" id="gsY-Hn-qlM"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niE-zd-IU3">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Updates">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updatesTapped:" destination="Mpa-A2-k2d" eventType="touchUpInside" id="HpE-6f-b1P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUi-66-bFI">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Of Intrest">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ofIntrestButtonTappred:" destination="Mpa-A2-k2d" eventType="touchUpInside" id="Ssu-VK-wrA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr6-9P-6vg">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XXt-4O-8Yf"/>
+                                    <constraint firstAttribute="height" constant="4" id="x7V-1C-dmP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SqP-wp-dxH" firstAttribute="top" secondItem="vm4-WY-0zj" secondAttribute="top" id="C1v-fh-FFb"/>
+                            <constraint firstItem="pr6-9P-6vg" firstAttribute="centerX" secondItem="TUi-66-bFI" secondAttribute="centerX" identifier="AlignCenterX" id="FXy-Xz-SRJ"/>
                             <constraint firstAttribute="trailing" secondItem="SqP-wp-dxH" secondAttribute="trailing" id="L1m-V0-qaD"/>
+                            <constraint firstItem="TUi-66-bFI" firstAttribute="bottom" secondItem="SqP-wp-dxH" secondAttribute="bottom" id="bdJ-VF-gwo"/>
+                            <constraint firstItem="TUi-66-bFI" firstAttribute="trailing" secondItem="SqP-wp-dxH" secondAttribute="centerX" constant="-60" id="cbI-Nb-OAe"/>
                             <constraint firstItem="SqP-wp-dxH" firstAttribute="leading" secondItem="vm4-WY-0zj" secondAttribute="leading" id="f1w-Jm-Ex8"/>
+                            <constraint firstItem="pr6-9P-6vg" firstAttribute="bottom" secondItem="SqP-wp-dxH" secondAttribute="bottom" id="hzY-Qf-Mi6"/>
+                            <constraint firstItem="niE-zd-IU3" firstAttribute="leading" secondItem="SqP-wp-dxH" secondAttribute="centerX" constant="60" id="kjg-wC-UW4"/>
+                            <constraint firstItem="niE-zd-IU3" firstAttribute="bottom" secondItem="SqP-wp-dxH" secondAttribute="bottom" id="za1-ph-U0a"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" image="(Unselected) News Icon" selectedImage="(Selected) News Icon" id="iLx-sd-b4k"/>
+                    <connections>
+                        <outlet property="horizontalBar" destination="pr6-9P-6vg" id="4Er-hs-adK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMp-Ag-53m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929.5" y="662.5"/>
+            <point key="canvasLocation" x="928.79999999999995" y="661.61919040479768"/>
         </scene>
         <!--Contact-->
         <scene sceneID="xz5-qe-Hhc">
@@ -366,7 +402,7 @@ Livonia MI, 48152</string>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="gallaryCollectionCell" id="0RT-OI-j0g" customClass="GalleryCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <rect key="frame" x="73" y="0.0" width="230" height="276"/>
+                                <rect key="frame" x="72.5" y="0.0" width="230" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="230" height="276"/>
