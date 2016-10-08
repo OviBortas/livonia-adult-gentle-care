@@ -9,27 +9,24 @@
 import UIKit
 
 class ContactVC: UIViewController {
+    @IBOutlet var textViews: [UITextView]!
+    @IBOutlet var textLabels: [UILabel]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        fixLayoutForSmallerScreen()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+    /* 
+        Adjust constraint to be closer to the leading margin for smaller screens else the
+        objects on screen will be too close to the leading edge.
     */
-
+    func fixLayoutForSmallerScreen() {
+        // Is iPhone 5 or lower
+        if UIScreen.main.bounds.width <= 320.0 {
+            for constraint in view.constraints where constraint.identifier == "PhoneLeadingAnchor" {
+                constraint.constant = 20.0
+            }
+        }
+    }
 }
