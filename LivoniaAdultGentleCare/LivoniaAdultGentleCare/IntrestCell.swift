@@ -13,13 +13,23 @@ class IntrestCell: UITableViewCell {
     @IBOutlet weak var authorPhoto: UIImageView!
     @IBOutlet weak var authorName: UILabel!
     @IBOutlet weak var publishTime: UILabel!
-    @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var articleBody: UIButton!
+    @IBOutlet weak var articleTitle: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupCell()
+        
+    }
+    
+    func setupCell() {
+        authorPhoto.layer.cornerRadius = 20
+        
+        articleTitle.contentHorizontalAlignment = .left
+        
+        articleBody.titleLabel?.numberOfLines = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -1,5 +1,5 @@
 //
-//  Update.swift
+//  UpdateCell.swift
 //  LivoniaAdultGentleCare
 //
 //  Created by Ovidiu Bortas on 10/10/16.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class Update: UITableViewCell {
-
+class UpdateCell: UITableViewCell {
+    @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var publishTime: UILabel!
+    @IBOutlet weak var body: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
