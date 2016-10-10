@@ -538,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 78PY5HFX5F;
 				INFOPLIST_FILE = LivoniaAdultGentleCare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -553,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 78PY5HFX5F;
 				INFOPLIST_FILE = LivoniaAdultGentleCare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

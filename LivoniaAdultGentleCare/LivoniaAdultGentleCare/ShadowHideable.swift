@@ -29,6 +29,13 @@ extension ShadowHideable where Self: UITabBarController {
 
 extension ShadowHideable where Self: UINavigationBar {
     
+    var barBackground: UIView {
+        for view in subviews where view.isType(of: "_UIBarBackground") {
+            return view
+        }
+        return UIView()
+    }
+    
     func hideShadowLine() {
         if isShadowLineHidden == false {
             for view in subviews where view.isType(of: "_UIBarBackground") {
