@@ -10,7 +10,7 @@ import UIKit
 
 class NewsVC: UIViewController {
     
-    //let gradient: CAGradientLayer = CAGradientLayer()
+    fileprivate var newsTVC: NewsTVC!
 
     @IBOutlet weak var horizontalBar: UIView!
     
@@ -36,10 +36,12 @@ class NewsVC: UIViewController {
     
     @IBAction func ofIntrestButtonTappred(_ sender: UIButton) {
         animateHorizontalBar(to: sender)
+        newsTVC.display = .ofIntest
     }
     
     @IBAction func updatesTapped(_ sender: UIButton) {
         animateHorizontalBar(to: sender)
+        newsTVC.display = .update
     }
     
     fileprivate func animateHorizontalBar(to destination: UIButton) {
@@ -64,21 +66,20 @@ class NewsVC: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [.beginFromCurrentState, .curveEaseOut], animations: {
             self.view.layoutIfNeeded()
             }, completion: nil)
-        
-//        UIView.animate(withDuration: 1.0) { 
-//            self.view.layoutIfNeeded()
-//        }
     }
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "NewsTVCId" {
+            if let tableView = segue.destination as? NewsTVC {
+                newsTVC = tableView
+            }
+        }
     }
-    */
 
 }

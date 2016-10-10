@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -104,7 +105,6 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niE-zd-IU3">
-                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Updates">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,7 +113,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUi-66-bFI">
-                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Of Intrest">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,20 +121,29 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr6-9P-6vg">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="XXt-4O-8Yf"/>
                                     <constraint firstAttribute="height" constant="4" id="x7V-1C-dmP"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0a-f1-KmX">
+                                <connections>
+                                    <segue destination="ipl-LX-NaK" kind="embed" identifier="NewsTVCId" id="Lqh-Pb-6hF"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iXj-QB-bD0" firstAttribute="top" secondItem="r0a-f1-KmX" secondAttribute="bottom" id="1Ks-Bc-cHz"/>
                             <constraint firstItem="SqP-wp-dxH" firstAttribute="top" secondItem="vm4-WY-0zj" secondAttribute="top" id="C1v-fh-FFb"/>
                             <constraint firstItem="pr6-9P-6vg" firstAttribute="centerX" secondItem="TUi-66-bFI" secondAttribute="centerX" identifier="AlignCenterX" id="FXy-Xz-SRJ"/>
                             <constraint firstAttribute="trailing" secondItem="SqP-wp-dxH" secondAttribute="trailing" id="L1m-V0-qaD"/>
+                            <constraint firstItem="r0a-f1-KmX" firstAttribute="leading" secondItem="vm4-WY-0zj" secondAttribute="leading" id="Oco-7v-ODJ"/>
+                            <constraint firstItem="r0a-f1-KmX" firstAttribute="top" secondItem="pr6-9P-6vg" secondAttribute="bottom" constant="8" id="UzM-SJ-ev3"/>
                             <constraint firstItem="TUi-66-bFI" firstAttribute="bottom" secondItem="SqP-wp-dxH" secondAttribute="bottom" id="bdJ-VF-gwo"/>
                             <constraint firstItem="TUi-66-bFI" firstAttribute="trailing" secondItem="SqP-wp-dxH" secondAttribute="centerX" constant="-60" id="cbI-Nb-OAe"/>
+                            <constraint firstAttribute="trailing" secondItem="r0a-f1-KmX" secondAttribute="trailing" id="efM-AZ-WXo"/>
                             <constraint firstItem="SqP-wp-dxH" firstAttribute="leading" secondItem="vm4-WY-0zj" secondAttribute="leading" id="f1w-Jm-Ex8"/>
                             <constraint firstItem="pr6-9P-6vg" firstAttribute="bottom" secondItem="SqP-wp-dxH" secondAttribute="bottom" id="hzY-Qf-Mi6"/>
                             <constraint firstItem="niE-zd-IU3" firstAttribute="leading" secondItem="SqP-wp-dxH" secondAttribute="centerX" constant="60" id="kjg-wC-UW4"/>
@@ -150,6 +158,166 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMp-Ag-53m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="661.61919040479768"/>
+        </scene>
+        <!--NewsTVC-->
+        <scene sceneID="1oC-ne-YAb">
+            <objects>
+                <tableViewController id="ipl-LX-NaK" customClass="NewsTVC" customModule="LivoniaAdultGentleCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="xFu-5d-Kf3">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="IntrestCellId" rowHeight="270" id="f0b-cN-TT7" customClass="IntrestCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="359" height="270"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f0b-cN-TT7" id="2hd-Ns-wxg">
+                                    <frame key="frameInset" width="359" height="269"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ag-oS-vZz">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="DVB-5j-WyX"/>
+                                                <constraint firstAttribute="height" constant="40" id="GNF-6e-rog"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-Y7-h5K">
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-eL-Ndo">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="9rx-QN-ecz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FrontYard1" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-I6-RCx">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="169.5" id="2nI-sk-uZN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipx-o6-J1j">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="QZv-eX-rBH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" title="The park is a favorite among skaters in California and it definitely deserves it. This is another sentence.">
+                                                <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZJ-11-i6R">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="a5A-jv-qYP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
+                                            <state key="normal" title=" →">
+                                                <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aw-Ci-M0k">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="R2u-yq-zRW"/>
+                                                <constraint firstAttribute="width" constant="160" id="dll-Zb-Fio"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                            <state key="normal" title="Article Title Goes Here">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0ZJ-11-i6R" firstAttribute="leading" secondItem="Ipx-o6-J1j" secondAttribute="trailing" id="9D6-2q-hCl"/>
+                                        <constraint firstItem="0ZJ-11-i6R" firstAttribute="height" secondItem="Ipx-o6-J1j" secondAttribute="height" id="MKa-Ni-NYA"/>
+                                        <constraint firstItem="hUW-I6-RCx" firstAttribute="top" secondItem="6Ag-oS-vZz" secondAttribute="bottom" constant="8" id="ObL-U8-Ian"/>
+                                        <constraint firstItem="fFK-eL-Ndo" firstAttribute="top" secondItem="2hd-Ns-wxg" secondAttribute="topMargin" id="OcA-Ex-gJV"/>
+                                        <constraint firstItem="fFK-eL-Ndo" firstAttribute="trailing" secondItem="2hd-Ns-wxg" secondAttribute="trailingMargin" id="Vda-iE-WGf"/>
+                                        <constraint firstItem="J9k-Y7-h5K" firstAttribute="top" secondItem="2hd-Ns-wxg" secondAttribute="topMargin" id="WYo-mt-iEy"/>
+                                        <constraint firstItem="J9k-Y7-h5K" firstAttribute="leading" secondItem="6Ag-oS-vZz" secondAttribute="trailing" constant="8" id="YkX-fK-2xh"/>
+                                        <constraint firstAttribute="bottom" secondItem="0ZJ-11-i6R" secondAttribute="bottom" id="ZqH-ED-pxq"/>
+                                        <constraint firstItem="1aw-Ci-M0k" firstAttribute="top" secondItem="J9k-Y7-h5K" secondAttribute="bottom" constant="4" id="ahz-ty-NbL"/>
+                                        <constraint firstItem="hUW-I6-RCx" firstAttribute="leading" secondItem="2hd-Ns-wxg" secondAttribute="leading" id="bT9-Hb-lMA"/>
+                                        <constraint firstItem="1aw-Ci-M0k" firstAttribute="leading" secondItem="6Ag-oS-vZz" secondAttribute="trailing" constant="8" id="edP-0i-6M8"/>
+                                        <constraint firstAttribute="trailing" secondItem="hUW-I6-RCx" secondAttribute="trailing" id="iZu-hx-XNL"/>
+                                        <constraint firstItem="fFK-eL-Ndo" firstAttribute="leading" relation="lessThanOrEqual" secondItem="J9k-Y7-h5K" secondAttribute="trailing" constant="40" id="isg-u6-YCi"/>
+                                        <constraint firstItem="Ipx-o6-J1j" firstAttribute="top" secondItem="hUW-I6-RCx" secondAttribute="bottom" constant="4" id="j4k-EW-383"/>
+                                        <constraint firstItem="6Ag-oS-vZz" firstAttribute="leading" secondItem="2hd-Ns-wxg" secondAttribute="leadingMargin" id="nnE-Hy-p1S"/>
+                                        <constraint firstItem="6Ag-oS-vZz" firstAttribute="top" secondItem="2hd-Ns-wxg" secondAttribute="topMargin" id="oEv-va-KUx"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ipx-o6-J1j" secondAttribute="bottom" id="vak-w0-6EO"/>
+                                        <constraint firstItem="Ipx-o6-J1j" firstAttribute="leading" secondItem="2hd-Ns-wxg" secondAttribute="leading" constant="8" id="xSF-QI-ed7"/>
+                                        <constraint firstAttribute="trailing" secondItem="0ZJ-11-i6R" secondAttribute="trailing" constant="8" id="yna-xV-ixZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleBody" destination="Ipx-o6-J1j" id="5fK-zB-2Hp"/>
+                                    <outlet property="articleImage" destination="hUW-I6-RCx" id="LFK-Fn-L1p"/>
+                                    <outlet property="articleTitle" destination="1aw-Ci-M0k" id="sPb-AJ-i5K"/>
+                                    <outlet property="authorName" destination="J9k-Y7-h5K" id="68b-IA-rdq"/>
+                                    <outlet property="authorPhoto" destination="6Ag-oS-vZz" id="HCo-4Q-UFd"/>
+                                    <outlet property="publishTime" destination="fFK-eL-Ndo" id="tTg-jj-vex"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UpdateCellId" id="RpZ-he-DH9" customClass="UpdateCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="298" width="359" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RpZ-he-DH9" id="TyK-mB-ZzS">
+                                    <frame key="frameInset" width="359" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwL-Y6-7OG">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="7Xk-Pm-jnD"/>
+                                                <constraint firstAttribute="height" constant="20" id="Wef-Pi-4GW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77j-Dq-VCV">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="Fei-EF-zdd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have an opening in one of our shared rooms and we are looking for a resident to occupy that space." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxY-ET-xSq">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bwL-Y6-7OG" firstAttribute="top" secondItem="TyK-mB-ZzS" secondAttribute="topMargin" id="3OR-e4-wxo"/>
+                                        <constraint firstItem="bwL-Y6-7OG" firstAttribute="leading" secondItem="TyK-mB-ZzS" secondAttribute="leadingMargin" id="EZS-vl-VMR"/>
+                                        <constraint firstItem="77j-Dq-VCV" firstAttribute="top" secondItem="TyK-mB-ZzS" secondAttribute="topMargin" id="OqK-YB-zoP"/>
+                                        <constraint firstItem="77j-Dq-VCV" firstAttribute="trailing" secondItem="TyK-mB-ZzS" secondAttribute="trailingMargin" id="Pgz-Kl-uCu"/>
+                                        <constraint firstItem="WxY-ET-xSq" firstAttribute="leading" secondItem="TyK-mB-ZzS" secondAttribute="leading" constant="8" id="SwR-Om-yZW"/>
+                                        <constraint firstAttribute="bottom" secondItem="WxY-ET-xSq" secondAttribute="bottom" id="aYo-fU-fjd"/>
+                                        <constraint firstAttribute="trailing" secondItem="WxY-ET-xSq" secondAttribute="trailing" constant="8" id="cqy-6M-9oT"/>
+                                        <constraint firstItem="WxY-ET-xSq" firstAttribute="top" secondItem="bwL-Y6-7OG" secondAttribute="bottom" constant="8" id="pNr-Wa-nRR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorName" destination="bwL-Y6-7OG" id="s3n-eZ-JfH"/>
+                                    <outlet property="body" destination="WxY-ET-xSq" id="sfo-dj-3Jy"/>
+                                    <outlet property="publishTime" destination="77j-Dq-VCV" id="ydV-oV-TfT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ipl-LX-NaK" id="OSO-67-3rZ"/>
+                            <outlet property="delegate" destination="ipl-LX-NaK" id="wbv-UV-VS2"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="359" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9l-RO-WEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="1454"/>
         </scene>
         <!--Contact-->
         <scene sceneID="xz5-qe-Hhc">
@@ -171,22 +339,14 @@
                                     <navigationItem title="Contact Us" id="PgA-xR-NlD"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livonia Adult Gentle Care " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="gPc-IN-SlN"/>
+                                    <constraint firstAttribute="height" constant="50" id="gPc-IN-SlN"/>
                                 </constraints>
-                                <string key="text">Livonia Adult Care
-Contact Information</string>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-vu-o7H" userLabel="ShadowLine">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="zi2-95-XEU"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-cN-huS">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="oHQ-Ra-n3u"/>
@@ -276,7 +436,11 @@ Livonia MI, 48152</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-Lg-OEV"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-Lg-OEV">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="2eL-Rx-IHU"/>
+                                </constraints>
+                            </mapView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Social Images" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-CB-a5p">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -299,14 +463,12 @@ Livonia MI, 48152</string>
                             <constraint firstItem="GWs-N0-fhF" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="FuN-Qd-xhO"/>
                             <constraint firstItem="fZq-X8-hzo" firstAttribute="top" secondItem="dTT-rs-nDD" secondAttribute="bottom" constant="8" id="HG9-jl-fOx"/>
                             <constraint firstItem="dTT-rs-nDD" firstAttribute="width" secondItem="ZSV-cN-huS" secondAttribute="height" multiplier="1:1" id="IM8-50-Hji"/>
-                            <constraint firstAttribute="trailing" secondItem="uW8-vu-o7H" secondAttribute="trailing" id="IkT-2v-w1T"/>
                             <constraint firstItem="Kc9-CB-a5p" firstAttribute="leading" secondItem="Zpw-ru-Ev9" secondAttribute="trailing" constant="12" id="Jrg-IY-nSk"/>
                             <constraint firstItem="hLl-cw-Fb0" firstAttribute="top" secondItem="kJy-wQ-Abe" secondAttribute="bottom" id="KAC-4m-lnq"/>
                             <constraint firstItem="dTT-rs-nDD" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="Nc2-9W-55b"/>
                             <constraint firstItem="Nw0-di-Pf6" firstAttribute="leading" secondItem="aUA-5h-XQ6" secondAttribute="trailing" constant="12" id="OEM-c8-uw2"/>
                             <constraint firstItem="9rt-W7-dq3" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="QJd-pa-Gep"/>
                             <constraint firstItem="Zpw-ru-Ev9" firstAttribute="leading" secondItem="GWs-N0-fhF" secondAttribute="trailing" constant="30" id="V4G-et-sKk"/>
-                            <constraint firstItem="uW8-vu-o7H" firstAttribute="top" secondItem="hLl-cw-Fb0" secondAttribute="bottom" id="VNT-gG-LNG"/>
                             <constraint firstItem="aUA-5h-XQ6" firstAttribute="centerY" secondItem="ZSV-cN-huS" secondAttribute="centerY" id="WXi-nd-sIQ"/>
                             <constraint firstItem="GWs-N0-fhF" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="XcA-Vg-mRk"/>
                             <constraint firstItem="kJy-wQ-Abe" firstAttribute="trailing" secondItem="VCc-VH-8v9" secondAttribute="trailing" id="YdI-qr-QdV"/>
@@ -316,6 +478,7 @@ Livonia MI, 48152</string>
                             <constraint firstItem="ibd-WK-I2R" firstAttribute="centerY" secondItem="Ghi-dv-1si" secondAttribute="centerY" id="ctP-7k-rFg"/>
                             <constraint firstItem="gPt-0u-U9v" firstAttribute="centerY" secondItem="dTT-rs-nDD" secondAttribute="centerY" id="fee-nv-JLR"/>
                             <constraint firstItem="ZSV-cN-huS" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" constant="50" identifier="PhoneLeadingAnchor" id="fzb-5w-OM2"/>
+                            <constraint firstItem="ZSV-cN-huS" firstAttribute="top" secondItem="hLl-cw-Fb0" secondAttribute="bottom" id="gWt-Wg-s5x"/>
                             <constraint firstItem="Ghi-dv-1si" firstAttribute="leading" secondItem="9rt-W7-dq3" secondAttribute="trailing" constant="30" id="gpg-T2-vne"/>
                             <constraint firstItem="fZq-X8-hzo" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="hHv-lP-HR8"/>
                             <constraint firstAttribute="trailing" secondItem="hLl-cw-Fb0" secondAttribute="trailing" id="hTo-WK-LZR"/>
@@ -323,7 +486,6 @@ Livonia MI, 48152</string>
                             <constraint firstItem="GWs-N0-fhF" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="kA6-iW-hIr"/>
                             <constraint firstItem="hLl-cw-Fb0" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="lWP-IH-WdT"/>
                             <constraint firstItem="gPt-0u-U9v" firstAttribute="leading" secondItem="dTT-rs-nDD" secondAttribute="trailing" constant="30" id="o4j-1O-zh3"/>
-                            <constraint firstItem="ZSV-cN-huS" firstAttribute="top" secondItem="uW8-vu-o7H" secondAttribute="bottom" constant="12" id="qsv-Ks-InT"/>
                             <constraint firstItem="KKc-dJ-pIi" firstAttribute="leading" secondItem="gPt-0u-U9v" secondAttribute="trailing" constant="12" id="rLa-7t-3mS"/>
                             <constraint firstItem="ibd-WK-I2R" firstAttribute="leading" secondItem="Ghi-dv-1si" secondAttribute="trailing" constant="12" id="rqP-G4-wPs"/>
                             <constraint firstItem="YIP-fB-1Kl" firstAttribute="centerY" secondItem="fZq-X8-hzo" secondAttribute="centerY" id="sSt-0G-ou1"/>
@@ -334,7 +496,6 @@ Livonia MI, 48152</string>
                             <constraint firstItem="kJy-wQ-Abe" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="vzZ-Z4-mpN"/>
                             <constraint firstItem="Kbt-u5-A4h" firstAttribute="leading" secondItem="YIP-fB-1Kl" secondAttribute="trailing" constant="12" id="w19-Ar-TVC"/>
                             <constraint firstItem="Nw0-di-Pf6" firstAttribute="centerY" secondItem="aUA-5h-XQ6" secondAttribute="centerY" id="xQy-N7-F1Y"/>
-                            <constraint firstItem="uW8-vu-o7H" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="y5y-vs-gVI"/>
                             <constraint firstItem="dTT-rs-nDD" firstAttribute="height" secondItem="ZSV-cN-huS" secondAttribute="height" id="yds-Wp-8dZ"/>
                         </constraints>
                     </view>
@@ -419,7 +580,7 @@ Livonia MI, 48152</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="● ● ●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qJ-MY-cGg">
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -566,6 +727,7 @@ Livonia MI, 48152</string>
         <image name="(Unselected) News Icon" width="30" height="30"/>
         <image name="Address Icon" width="30" height="30"/>
         <image name="Email Icon" width="30" height="30"/>
+        <image name="FrontYard1" width="800" height="533"/>
         <image name="Phone Icon" width="29" height="30"/>
         <image name="Pinapples" width="948" height="1685"/>
         <image name="Social Media" width="30" height="30"/>

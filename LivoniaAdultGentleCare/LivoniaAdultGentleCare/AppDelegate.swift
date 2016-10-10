@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let barOffset: CGFloat = -10
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //UIBarButtonItem.appearance(whenContainedInInstancesOf: [NavigationBar.self]).setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 0.0, vertical: barOffset), for: .default)
         
         return true
     }
