@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0F0A471DAC241F00BAA000 /* IntrestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F0A461DAC241F00BAA000 /* IntrestCell.swift */; };
+		EF0F0A491DAC243100BAA000 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F0A481DAC243100BAA000 /* Update.swift */; };
 		EF345D751D96E3030029BD4B /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D741D96E3030029BD4B /* GalleryModel.swift */; };
 		EF345D771D9726AF0029BD4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D761D9726AF0029BD4B /* Extensions.swift */; };
 		EF345D791D976C650029BD4B /* ShadowHideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D781D976C650029BD4B /* ShadowHideable.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF0F0A461DAC241F00BAA000 /* IntrestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrestCell.swift; sourceTree = "<group>"; };
+		EF0F0A481DAC243100BAA000 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		EF345D741D96E3030029BD4B /* GalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
 		EF345D761D9726AF0029BD4B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EF345D781D976C650029BD4B /* ShadowHideable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowHideable.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				EFBF92E61DA6F28A00C031A1 /* PageControlView.swift */,
+				EF0F0A461DAC241F00BAA000 /* IntrestCell.swift */,
+				EF0F0A481DAC243100BAA000 /* Update.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				EF6A9AA01D9B38F0009B2768 /* GalleryPVC.swift in Sources */,
 				EF6A9AA21D9B3AE4009B2768 /* GalleryDisplayModel.swift in Sources */,
 				EF345D7B1D987CBC0029BD4B /* HomePVC.swift in Sources */,
+				EF0F0A491DAC243100BAA000 /* Update.swift in Sources */,
 				EFAB47381D8DB93D00F78BF0 /* NewsVC.swift in Sources */,
 				EFF514251D92173F001F5B41 /* TabBarItem.swift in Sources */,
 				EF345D7D1D987F2B0029BD4B /* HomeDisplayModel.swift in Sources */,
@@ -381,6 +388,7 @@
 				EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */,
 				EFF5141D1D91F977001F5B41 /* TabBarController.swift in Sources */,
 				EF5EEC1A1DA0A19300462E10 /* GalleryDisplayCVC.swift in Sources */,
+				EF0F0A471DAC241F00BAA000 /* IntrestCell.swift in Sources */,
 				EF345D771D9726AF0029BD4B /* Extensions.swift in Sources */,
 				EFAB47341D8DB91200F78BF0 /* HomeVC.swift in Sources */,
 				EF345D751D96E3030029BD4B /* GalleryModel.swift in Sources */,
