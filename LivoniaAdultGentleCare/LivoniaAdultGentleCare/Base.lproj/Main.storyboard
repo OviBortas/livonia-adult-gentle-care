@@ -104,7 +104,6 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niE-zd-IU3">
-                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Updates">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,7 +112,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUi-66-bFI">
-                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Of Intrest">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,7 +120,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr6-9P-6vg">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="XXt-4O-8Yf"/>
                                     <constraint firstAttribute="height" constant="4" id="x7V-1C-dmP"/>
@@ -171,17 +169,15 @@
                                     <navigationItem title="Contact Us" id="PgA-xR-NlD"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livonia Adult Gentle Care " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-cw-Fb0">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="gPc-IN-SlN"/>
+                                    <constraint firstAttribute="height" constant="50" id="gPc-IN-SlN"/>
                                 </constraints>
-                                <string key="text">Livonia Adult Care
-Contact Information</string>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-vu-o7H" userLabel="ShadowLine">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-vu-o7H" userLabel="ShadowLine">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zi2-95-XEU"/>
@@ -323,7 +319,7 @@ Livonia MI, 48152</string>
                             <constraint firstItem="GWs-N0-fhF" firstAttribute="centerX" secondItem="ZSV-cN-huS" secondAttribute="centerX" id="kA6-iW-hIr"/>
                             <constraint firstItem="hLl-cw-Fb0" firstAttribute="leading" secondItem="VCc-VH-8v9" secondAttribute="leading" id="lWP-IH-WdT"/>
                             <constraint firstItem="gPt-0u-U9v" firstAttribute="leading" secondItem="dTT-rs-nDD" secondAttribute="trailing" constant="30" id="o4j-1O-zh3"/>
-                            <constraint firstItem="ZSV-cN-huS" firstAttribute="top" secondItem="uW8-vu-o7H" secondAttribute="bottom" constant="12" id="qsv-Ks-InT"/>
+                            <constraint firstItem="ZSV-cN-huS" firstAttribute="top" secondItem="uW8-vu-o7H" secondAttribute="bottom" id="qsv-Ks-InT"/>
                             <constraint firstItem="KKc-dJ-pIi" firstAttribute="leading" secondItem="gPt-0u-U9v" secondAttribute="trailing" constant="12" id="rLa-7t-3mS"/>
                             <constraint firstItem="ibd-WK-I2R" firstAttribute="leading" secondItem="Ghi-dv-1si" secondAttribute="trailing" constant="12" id="rqP-G4-wPs"/>
                             <constraint firstItem="YIP-fB-1Kl" firstAttribute="centerY" secondItem="fZq-X8-hzo" secondAttribute="centerY" id="sSt-0G-ou1"/>
@@ -402,7 +398,7 @@ Livonia MI, 48152</string>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="gallaryCollectionCell" id="0RT-OI-j0g" customClass="GalleryCell" customModule="LivoniaAdultGentleCare" customModuleProvider="target">
-                                <rect key="frame" x="72.5" y="0.0" width="230" height="276"/>
+                                <rect key="frame" x="73" y="0.0" width="230" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="230" height="276"/>
@@ -419,7 +415,7 @@ Livonia MI, 48152</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="● ● ●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qJ-MY-cGg">
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
