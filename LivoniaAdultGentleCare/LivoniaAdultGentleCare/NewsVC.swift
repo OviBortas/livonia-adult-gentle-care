@@ -14,6 +14,8 @@ class NewsVC: UIViewController {
 
     @IBOutlet weak var horizontalBar: UIView!
     
+//    let pManager = PostManager.sharedInstance
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -37,11 +39,14 @@ class NewsVC: UIViewController {
     @IBAction func ofIntrestButtonTappred(_ sender: UIButton) {
         animateHorizontalBar(to: sender)
         newsTVC.display = .ofIntest
+      
+      
     }
     
     @IBAction func updatesTapped(_ sender: UIButton) {
         animateHorizontalBar(to: sender)
         newsTVC.display = .update
+      
     }
     
     fileprivate func animateHorizontalBar(to destination: UIButton) {

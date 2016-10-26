@@ -26,7 +26,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate, ShadowHi
             (viewController as! UINavigationController).popToRootViewController(animated: false)
         }
     }
-    
 }
 
 class NavigationBar: UINavigationBar, ShadowHideable, UIBarPositioningDelegate {
@@ -38,28 +37,12 @@ class NavigationBar: UINavigationBar, ShadowHideable, UIBarPositioningDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let font = UIFont(name: "AvenirNextCondensed-Regular", size: 24)!
+        let font = UIFont(name: "AvenirNext-Medium", size: 26)!
         titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white]
         items?.first?.leftBarButtonItem?.tintColor = UIColor.white
         
         tintColor = UIColor.white
-        
-        // Adjust the navigation title
-        //setTitleVerticalPositionAdjustment(-20.0, for: .default)
-        backIndicatorImage = UIImage(named: "back_detail")?.withRenderingMode(.alwaysOriginal).withAlignmentRectInsets(UIEdgeInsets(top: -20.0, left: 20.0, bottom: 0.0, right: 0.0))
-        backIndicatorTransitionMaskImage = UIImage(named: "back_detail")?.withRenderingMode(.alwaysOriginal).withAlignmentRectInsets(UIEdgeInsets(top: -20.0, left: 20.0, bottom: 0.0, right: 0.0))
-        
-        print(backIndicatorImage?.images)
-        
     }
-    
-    
-//    override func sizeThatFits(_ size: CGSize) -> CGSize {
-//        super.sizeThatFits(size)
-//        return CGSize(width: self.superview!.frame.size.width, height: navBarHeight)
-//    }
-    
-    var set = false
     
     override func layoutSubviews() {
         super.layoutSubviews()

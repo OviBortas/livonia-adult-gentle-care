@@ -6,6 +6,8 @@ target 'LivoniaAdultGentleCare' do
   use_frameworks!
 
   # Pods for LivoniaAdultGentleCare
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
 
   target 'LivoniaAdultGentleCareTests' do
     inherit! :search_paths

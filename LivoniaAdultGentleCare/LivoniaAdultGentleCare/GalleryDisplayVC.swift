@@ -12,16 +12,8 @@ class GalleryDisplayVC: UIViewController {
 
     @IBOutlet weak var imgView: UIImageView!
     
-//    var vcIndex: Int!
-//    var imgName: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //imgView.image = UIImage(named: imgName)
-        
-
-        // Do any additional setup after loading the view.
     }
 
 }
