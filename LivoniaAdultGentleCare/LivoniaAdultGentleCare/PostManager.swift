@@ -13,10 +13,12 @@ class PostManager: NSObject, NSCacheDelegate {
    
    // MARK: - Properties
    static let sharedInstance = PostManager()
-   
    fileprivate let fetchAmount = 30
    fileprivate var isFetching = false
    fileprivate let author = "Livonia Adult Gentle Care"
+   
+   fileprivate let userDefaults: UserDefaults = UserDefaults.standard
+   fileprivate let updatePostKey = "updatePostKey"
    
    var interestPosts: [InterestPost]?
    var updatePosts: [UpdatePost]?
@@ -104,62 +106,30 @@ class PostManager: NSObject, NSCacheDelegate {
             }
          }
          
+         
          interestPosts = newInterestPosts
          updatePosts = newUpdatePosts
       }
    }
+   
+   func saveChanges() {
+      
+      var savedDictArray: [[String: Any?]] = [[String: Any?]]()
+      
+      updatePosts?.forEach { item in
+         savedDictArray.append(item.toDictionary())
+      }
+      
+      userDefaults.set(savedDictArray, forKey: updatePostKey)
+   }
 }
 
 
-//extension String {
-//   var toNSString: NSString {
-//      return NSString(string: self)
-//   }
-//}
-
-//    fileprivate var urlCache: URLCache
-//    let interestPostCache: NSCache<NSString, InterestPost> = NSCache()
-//    let updatePostCache: NSCache<NSString, UpdatePost> = NSCache()
-
-//    override init() {
-//
-//        // Setup URL Cache
-//        let memoryCapacity = 50 * 1024 * 1024 // 50MB
-//        let diskCapacity = 75 * 1024 * 1024   // 75MB
-//        let path = "fbFetchedData"
-//        urlCache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: path)
-//        URLCache.shared = urlCache
-//
-//
-//        // Setup Post cache
-//        interestPostCache.countLimit = 12
-//        interestPostCache.name = "interestPostCache"
-//
-//        updatePostCache.countLimit = 12
-//        updatePostCache.name = "updatePostCache"
-//
-//
-//        super.init()
-//
-//        updatePostCache.delegate = self
-//    }
 
 
 
-//    func cache(object: AnyObject) {
-//
-//        if object.isKind(of: UpdatePost.self) {
-//            print("Update")
-//
-//        }
-//        else if object.isKind(of: InterestPost.self) {
-//            print("Interest")
-//        }
-//        else {
-//            print("Unknown class \(#function) \(#line)")
-//        }
-//    }
 
-//    func cache(_ cache: NSCache<AnyObject, AnyObject>, willEvictObject obj: Any) {
-//        print((obj as? UpdatePost)?.author)
-//    }
+
+
+
+

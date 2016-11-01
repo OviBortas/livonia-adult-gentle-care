@@ -11,5 +11,4 @@ import UIKit
 class GalleryDisplayVC: UIViewController {
    
    @IBOutlet weak var imgView: UIImageView!
-   
 }

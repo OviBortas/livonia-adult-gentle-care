@@ -8,18 +8,6 @@
 
 import UIKit
 
-struct DictKeys {
-   
-   static let authorPhotoURL   = "authorPhotoURL"
-   static let author           = "author"
-   static let publishTime      = "publishTime"
-   static let articleTitle     = "articleTitle"
-   static let articleImageURL  = "articleImageURL"
-   static let articleURL       = "articleURL"
-   static let body             = "body"
-   static let index            = "index"
-}
-
 class InterestPost {
    
    let authorPhotoURL: URL?

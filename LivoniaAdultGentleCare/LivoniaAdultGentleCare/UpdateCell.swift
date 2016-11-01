@@ -16,6 +16,13 @@ class UpdateCell: UITableViewCell {
          publishTime.text = post?.timeAgo
          title.text = post?.title
          body.text = post?.body
+         
+         if let didView = post?.didView, didView {
+            ring.image = UIImage(named: "Grey Ring")
+         }
+         else {
+            ring.image = UIImage(named: "Blue Ring")
+         }
       }
    }
    
@@ -48,6 +55,13 @@ class UpdateCell: UITableViewCell {
          collapseLabel()
       }
       tableView?.endUpdates()
+      
+      // When the cell is selected and was not viewed before change ring image and save changes
+      if selected, let didView = post?.didView, !didView {
+         ring.image = UIImage(named: "Grey Ring")
+         post?.didView = true
+         PostManager.sharedInstance.saveChanges()
+      }
    }
    
    override func awakeFromNib() {
