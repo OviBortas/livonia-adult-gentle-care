@@ -11,6 +11,7 @@ import FBSDKShareKit
 
 class PostManager: NSObject, NSCacheDelegate {
    
+   // MARK: - Properties
    static let sharedInstance = PostManager()
    
    fileprivate let fetchAmount = 30
@@ -20,16 +21,14 @@ class PostManager: NSObject, NSCacheDelegate {
    var interestPosts: [InterestPost]?
    var updatePosts: [UpdatePost]?
    
-   
+   // MARK: - Methods
    func setupCache() {
       // Setup the URLCache
       let urlCache = URLCache(memoryCapacity: 20 * 1024 * 1024, diskCapacity: 50 * 1024 * 1024, diskPath: nil)
       URLCache.shared = urlCache
    }
    
-   
    func fetchFBPosts() {
-      
       if isFetching == false {
          isFetching = true
          
@@ -53,10 +52,8 @@ class PostManager: NSObject, NSCacheDelegate {
    }
    
    func parse(fetchedPosts postJSON: [String: AnyObject]?) {
-      
       // Check if postJSON exists and grab the data
       if let posts = postJSON?["posts"] as? [String: AnyObject], let data = posts["data"] as? [[String: AnyObject]] {
-      
          
          var newInterestPosts = [InterestPost]()
          var newUpdatePosts = [UpdatePost]()
@@ -74,9 +71,6 @@ class PostManager: NSObject, NSCacheDelegate {
             
             // If the message contains the #
             if message != nil && message!.contains("#articleofinterest") {
-               
-               print(articleBody)
-               
                // Create the needed URL objects
                let picURL = URL(string: pictureURL ?? "")
                let picURLSmall = URL(string: pictureURLSmall ?? "")
@@ -117,13 +111,11 @@ class PostManager: NSObject, NSCacheDelegate {
 }
 
 
-
-
-extension String {
-   var toNSString: NSString {
-      return NSString(string: self)
-   }
-}
+//extension String {
+//   var toNSString: NSString {
+//      return NSString(string: self)
+//   }
+//}
 
 //    fileprivate var urlCache: URLCache
 //    let interestPostCache: NSCache<NSString, InterestPost> = NSCache()

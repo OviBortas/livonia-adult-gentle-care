@@ -9,65 +9,65 @@
 import UIKit
 
 enum Display {
-   case ofIntest
+   
+   case ofInterest
    case update
 }
 
 class NewsTVC: UITableViewController {
-   fileprivate let ofIntrestCellId = "IntrestCellId"
+   
+   fileprivate let ofInterestCellId = "InterestCellId"
    fileprivate let updateCellId = "UpdateCellId"
-   
+   fileprivate let cellHeight: CGFloat = 326.0
    fileprivate let postManager = PostManager.sharedInstance
+   fileprivate var lastSelectedIndex: IndexPath? = nil
    
-   var display: Display = .ofIntest {
-      didSet { tableView.reloadData() }
+   var display: Display = .ofInterest {
+      didSet {
+         //Reloads the tableview data when a NEW category is selected
+         if oldValue != display {
+            let animationDirection: UITableViewRowAnimation = oldValue == .ofInterest ? .left : .right
+   
+            tableView.reloadSections(IndexSet(integer: 0), with: animationDirection)
+         }
+      }
    }
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      tableView.estimatedRowHeight = 292.0
+      tableView.estimatedRowHeight = cellHeight
    }
    
    // MARK: - Table view data source
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // #warning Incomplete implementation, return the number of rows
-      return display == .ofIntest ? postManager.interestPosts?.count ?? 0 : postManager.updatePosts?.count ?? 0
+      return display == .ofInterest ? postManager.interestPosts?.count ?? 0 : postManager.updatePosts?.count ?? 0
    }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      return cell(forRowAt: indexPath)
+      return newCell(forRowAt: indexPath)
    }
    
-   func cell(forRowAt indexPath: IndexPath) -> UITableViewCell {
-      
-      
-      
+   func newCell(forRowAt indexPath: IndexPath) -> UITableViewCell {
       switch display {
-      case .ofIntest:
-         let cell = tableView.dequeueReusableCell(withIdentifier: ofIntrestCellId, for: indexPath) as! IntrestCell
-         
+      case  .ofInterest:
+         let cell = tableView.dequeueReusableCell(withIdentifier: ofInterestCellId, for: indexPath) as! InterestCell
          cell.post = postManager.interestPosts?[indexPath.row]
-         
          return cell
-         
       case .update:
          let cell = tableView.dequeueReusableCell(withIdentifier: updateCellId, for: indexPath) as! UpdateCell
-         
          cell.post = postManager.updatePosts?[indexPath.row]
          
+         if cell.tableView == nil {
+            cell.tableView = tableView
+         }
          return cell
       }
    }
    
    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      return display == .ofIntest ? 292.0 : UITableViewAutomaticDimension
-   }
-   
-   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      print(display)
-      print(postManager.interestPosts!)
-      print(postManager.updatePosts!)
+      return display == .ofInterest ? cellHeight : UITableViewAutomaticDimension
    }
    
    /*

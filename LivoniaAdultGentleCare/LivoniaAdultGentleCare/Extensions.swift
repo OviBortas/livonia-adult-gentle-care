@@ -17,7 +17,6 @@ extension DateFormatter {
       
       // Get date object from the given date
       if let timeAgoDate = date(from: time) {
-         
          let calendar = Calendar.current
          
          let components = calendar.dateComponents([.day, .weekOfMonth, .month, .year, .hour, .minute, .second],
@@ -38,10 +37,10 @@ extension DateFormatter {
          }
          
          if year > 1 {
-            time = "\(year) years ago"
+            time = "\(year) Years Ago"
          }
          else if year > 0 {
-            time = "\(year) year ago"
+            time = "\(year) Year Ago"
          }
          else if month > 0 {
             let months = shortMonthSymbols
@@ -50,37 +49,35 @@ extension DateFormatter {
             time = monthSymbol + " \(day)"
          }
          else if week > 1 {
-            time = "\(week) weeks ago"
+            time = "\(week) Weeks Ago"
          }
          else if week > 0 {
-            time = "\(week) week ago"
+            time = "\(week) Week Ago"
          }
          else if day > 1 {
-            time = "\(day) days ago"
+            time = "\(day) Days Ago"
          }
          else if day > 0 {
-            time = "\(day) day ago"
+            time = "\(day) Day Ago"
          }
          else if hour > 1 {
-            time = "\(hour) hours ago"
+            time = "\(hour) Hours Ago"
          }
          else if hour > 0 {
-            time = "\(hour) hour ago"
+            time = "\(hour) Hour Ago"
          }
          else if minute > 1 {
-            time = "\(minute) minutes ago"
+            time = "\(minute) Minutes Ago"
          }
          else if minute > 0 {
-            time = "\(minute) minute ago"
+            time = "\(minute) Minute Ago"
          }
          else if second > 1 {
-            time = "\(second) seconds ago"
+            time = "\(second) Seconds Ago"
          }
          else if second > 0 {
-            time = "\(second) second ago"
+            time = "\(second) Second Ago"
          }
-         
-         print("THIS IS THE TIME: \(time)")
          return time
       }
       else {
@@ -93,7 +90,6 @@ extension DateFormatter {
 extension Optional {
    
    func zz(_ path: String = #file, _ function: String = #function, _ line: Int = #line) -> Optional {
-      
       if self == nil {
          print("IM Nil!")
          let file = String(String(path.characters.reversed()).components(separatedBy: "/").first!.characters.reversed())
@@ -148,10 +144,8 @@ func checkNil<T>(_ type: T?, _ path: String = #file, _ function: String = #funct
    return type
 }
 
-
-
-
 extension UIColor {
+   
    convenience init(red: Int, green: Int, blue: Int) {
       assert(red >= 0 && red <= 255, "Invalid red component")
       assert(green >= 0 && green <= 255, "Invalid green component")

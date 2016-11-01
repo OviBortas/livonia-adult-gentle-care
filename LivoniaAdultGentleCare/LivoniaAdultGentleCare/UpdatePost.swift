@@ -26,9 +26,7 @@ class UpdatePost {
       self.index = index
       
       self.timeAgo = DateFormatter().timeAgo(from: publishTime!)
-      
    }
-   
    
    func toDictionary() -> [String: Any] {
       let dict: [String: Any] = [DictKeys.author:         author,

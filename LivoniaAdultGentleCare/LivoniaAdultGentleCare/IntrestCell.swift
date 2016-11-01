@@ -1,5 +1,5 @@
 //
-//  IntrestCell.swift
+//  InterestCell.swift
 //  LivoniaAdultGentleCare
 //
 //  Created by Ovidiu Bortas on 10/10/16.
@@ -8,15 +8,11 @@
 
 import UIKit
 
-// [.application, .normal, .disabled, .focused, .highlighted, .reserved, .selected]
 
-class IntrestCell: UITableViewCell {
+class InterestCell: UITableViewCell {
    
    var post: InterestPost? {
       didSet {
-         //articleBody.titleLabel?.numberOfLines = 2
-         
-         authorPhoto.image = UIImage(named: "Website Icon")
          authorName.text = post?.author
          publishTime.text = post?.timeAgo
          articleImage.image = post?.articlePhoto
@@ -34,22 +30,19 @@ class IntrestCell: UITableViewCell {
    
    override func awakeFromNib() {
       super.awakeFromNib()
-      
       setupCell()
    }
    
    func setupCell() {
-      authorPhoto.layer.cornerRadius = 20
-      
+      authorPhoto.layer.cornerRadius = 14
       articleTitle.contentHorizontalAlignment = .left
-      
       articleBody.titleLabel?.numberOfLines = 2
+      articleTitle.alpha = 0.6
    }
    
-   override func setSelected(_ selected: Bool, animated: Bool) {
-      super.setSelected(selected, animated: animated)
-      
-      // Configure the view for the selected state
+   @IBAction func showArticleInWeb(_ sender: UIButton) {
+      if let url = post?.articleURL {
+         UIApplication.shared.openURL(url)
+      }
    }
-   
 }

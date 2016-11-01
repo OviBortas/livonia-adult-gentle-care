@@ -9,6 +9,7 @@
 import UIKit
 
 struct DictKeys {
+   
    static let authorPhotoURL   = "authorPhotoURL"
    static let author           = "author"
    static let publishTime      = "publishTime"
@@ -54,7 +55,6 @@ class InterestPost {
    }
    
    func downloadImage(from url: URL?) {
-      
       guard let url = url else { return }
       
       URLSession.shared.dataTask(with: url) { (data, response, error) in

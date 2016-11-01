@@ -9,11 +9,7 @@
 import UIKit
 
 class GalleryDisplayVC: UIViewController {
-
-    @IBOutlet weak var imgView: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+   
+   @IBOutlet weak var imgView: UIImageView!
+   
 }

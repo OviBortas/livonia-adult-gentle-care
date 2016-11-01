@@ -9,23 +9,13 @@
 import UIKit
 
 class GalleryDisplayCell: UICollectionViewCell {
-    @IBOutlet weak var imgView: UIImageView!
-    
-    var imgName: String!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        //contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        //contentView.translatesAutoresizingMaskIntoConstraints = true
-        
-        //imgView.image = UIImage(named: imgName)
-    }
-
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        imgView.image = UIImage(named: imgName)
-//    }
-    
+   
+   @IBOutlet weak var imgView: UIImageView!
+   @IBOutlet weak var imageDescriptionLabel: UILabel!
+   
+   var imgName: String?
+   
+   override func awakeFromNib() {
+      super.awakeFromNib()
+   }
 }
