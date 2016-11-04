@@ -26,6 +26,8 @@ class HomeVC: UIViewController {
       titleLabel.text = data.title
       bodyTF.text = data.body
       
+      bodyTF.font = UIFont(name: "AvenirNext-Regular", size: 18.0)
+      
       labelLine.constraints.forEach { (constraint) in
          if constraint.firstAttribute == .height {
             labelLine.layer.cornerRadius = constraint.constant / 2
@@ -41,6 +43,7 @@ class HomeVC: UIViewController {
 // Class that draws a triangle
 // It is used to make the HomeVC ImageView look like it is croped on an triangular angle
 class View: UIView {
+   
    
    override func draw(_ rect: CGRect) {
       let ctx = UIGraphicsGetCurrentContext()

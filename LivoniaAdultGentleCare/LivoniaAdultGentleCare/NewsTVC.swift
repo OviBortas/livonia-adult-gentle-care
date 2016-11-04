@@ -22,11 +22,11 @@ class NewsTVC: UITableViewController {
    fileprivate let postManager = PostManager.sharedInstance
    fileprivate var lastSelectedIndex: IndexPath? = nil
    
-   var display: Display = .ofInterest {
+   var display: Display = .update {
       didSet {
          //Reloads the tableview data when a NEW category is selected
          if oldValue != display {
-            let animationDirection: UITableViewRowAnimation = oldValue == .ofInterest ? .left : .right
+            let animationDirection: UITableViewRowAnimation = oldValue == .update ? .left : .right
    
             tableView.reloadSections(IndexSet(integer: 0), with: animationDirection)
          }

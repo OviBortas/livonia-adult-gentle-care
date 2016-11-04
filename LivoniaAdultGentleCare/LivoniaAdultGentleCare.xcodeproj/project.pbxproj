@@ -23,7 +23,6 @@
 		EF345D7D1D987F2B0029BD4B /* HomeDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF345D7C1D987F2B0029BD4B /* HomeDisplayModel.swift */; };
 		EF5EEC1A1DA0A19300462E10 /* GalleryDisplayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EEC191DA0A19300462E10 /* GalleryDisplayCVC.swift */; };
 		EF5EEC1C1DA0A48600462E10 /* GalleryDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EEC1B1DA0A48600462E10 /* GalleryDisplayCell.swift */; };
-		EF6A9AA41D9B44EC009B2768 /* GalleryDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A9AA31D9B44EC009B2768 /* GalleryDisplayVC.swift */; };
 		EFAB47001D8DB72200F78BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB46FF1D8DB72200F78BF0 /* AppDelegate.swift */; };
 		EFAB47071D8DB72300F78BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAB47051D8DB72300F78BF0 /* Main.storyboard */; };
 		EFAB47091D8DB72300F78BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAB47081D8DB72300F78BF0 /* Assets.xcassets */; };
@@ -80,7 +79,6 @@
 		EF345D7C1D987F2B0029BD4B /* HomeDisplayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayModel.swift; sourceTree = "<group>"; };
 		EF5EEC191DA0A19300462E10 /* GalleryDisplayCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayCVC.swift; sourceTree = "<group>"; };
 		EF5EEC1B1DA0A48600462E10 /* GalleryDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayCell.swift; sourceTree = "<group>"; };
-		EF6A9AA31D9B44EC009B2768 /* GalleryDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisplayVC.swift; sourceTree = "<group>"; };
 		EFAB46FC1D8DB72200F78BF0 /* LivoniaAdultGentleCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivoniaAdultGentleCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAB46FF1D8DB72200F78BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFAB47061D8DB72300F78BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				EFF514221D9207FD001F5B41 /* GalleryCVC.swift */,
 				EF5EEC191DA0A19300462E10 /* GalleryDisplayCVC.swift */,
 				EF5EEC1B1DA0A48600462E10 /* GalleryDisplayCell.swift */,
-				EF6A9AA31D9B44EC009B2768 /* GalleryDisplayVC.swift */,
 				EFF5141C1D91F977001F5B41 /* TabBarController.swift */,
 			);
 			name = Controller;
@@ -549,7 +546,6 @@
 				EF03BE151DAC36C800E88A51 /* NewsTVC.swift in Sources */,
 				EF03BE171DAC5BCB00E88A51 /* PostManager.swift in Sources */,
 				EF345D7D1D987F2B0029BD4B /* HomeDisplayModel.swift in Sources */,
-				EF6A9AA41D9B44EC009B2768 /* GalleryDisplayVC.swift in Sources */,
 				EF03BE1C1DAC649400E88A51 /* UpdatePost.swift in Sources */,
 				EF03BE1A1DAC647C00E88A51 /* IntresetPost.swift in Sources */,
 				EFAB47361D8DB92000F78BF0 /* GalleryVC.swift in Sources */,

@@ -59,11 +59,11 @@ class NewsVC: UIViewController {
    }
    // MARK: - @IBAction - GestureRecognizer
    @IBAction func swippedLeft(_ sender: UISwipeGestureRecognizer) {
-      updatesTapped(updatesButton)
+      ofIntrestButtonTappred(ofInterestButton)
    }
    
    @IBAction func swippedRight(_ sender: UISwipeGestureRecognizer) {
-      ofIntrestButtonTappred(ofInterestButton)
+      updatesTapped(updatesButton)
    }
    
    // MARK: - Animations

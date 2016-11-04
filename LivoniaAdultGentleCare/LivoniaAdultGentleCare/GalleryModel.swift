@@ -24,22 +24,22 @@ class GalleryModel {
       let item1 = GalleryData(title: "Exterior", displayImg: UIImage(named: "ExteriorP")!, imgNames: item1Assets, imageDescription: "Front Yard and Back Yard")
       
       let item2Assets = ["Bedroom1-1", "Bedroom1-2", "Bedroom1-3", "Bath1-1", "Bath1-2", "Bath1-3"]
-      let item2 = GalleryData(title: "Room 1", displayImg: UIImage(named: "Room 1P")!, imgNames: item2Assets, imageDescription: "Room 1/Shared Bath")
+      let item2 = GalleryData(title: "Room 1", displayImg: UIImage(named: "Room 1P")!, imgNames: item2Assets, imageDescription: "Room 1 With Shared Bath")
       
       let item3Assets = ["Bedroom2-1", "Bedroom2-2", "Bedroom2-3", "Bath1-1", "Bath1-2", "Bath1-3"]
-      let item3 = GalleryData(title: "Room 2", displayImg: UIImage(named: "Room 2P")!, imgNames: item3Assets, imageDescription: "Room 2/Shared Bath")
+      let item3 = GalleryData(title: "Room 2", displayImg: UIImage(named: "Room 2P")!, imgNames: item3Assets, imageDescription: "Room 2 With Shared Bath")
       
       let item4Assets = ["Bedroom3-1", "Bedroom3-2", "Bedroom3-3", "Bath2-1", "Bath2-2"]
-      let item4 = GalleryData(title: "Room 3", displayImg: UIImage(named: "Room 3P")!, imgNames: item4Assets, imageDescription: "Room 3/Private Bath")
+      let item4 = GalleryData(title: "Room 3", displayImg: UIImage(named: "Room 3P")!, imgNames: item4Assets, imageDescription: "Room 3 With Private Bath")
       
       let item5Assets = ["Bedroom4-1", "Bath3-1", "Bath3-2"]
-      let item5 = GalleryData(title: "Room 4", displayImg: UIImage(named: "Room 4P")!, imgNames: item5Assets, imageDescription: "Room 4/Private Bath")
+      let item5 = GalleryData(title: "Room 4", displayImg: UIImage(named: "Room 4P")!, imgNames: item5Assets, imageDescription: "Room 4 With Private Bath")
       
       let item6Assets = ["Livingroom1", "Livingroom2", "Livingroom3", "Hall2", "Nook1", "Nook2"]
-      let item6 = GalleryData(title: "Living Room", displayImg: UIImage(named: "Living RoomP")!, imgNames: item6Assets, imageDescription: "Living Room/Hallways")
+      let item6 = GalleryData(title: "Living Room", displayImg: UIImage(named: "Living RoomP")!, imgNames: item6Assets, imageDescription: "Living Room And Hallways")
       
       let item7Assets = ["Kitchen4", "Kitchen1", "Kitchen2", "Kitchen3"]
-      let item7 = GalleryData(title: "Kitchen", displayImg: UIImage(named: "KitchenP")!, imgNames: item7Assets, imageDescription: "Kitchen/Dining Area")
+      let item7 = GalleryData(title: "Kitchen", displayImg: UIImage(named: "KitchenP")!, imgNames: item7Assets, imageDescription: "Kitchen And Dining Area")
       
       let item8 = GalleryData(title: "None", displayImg: UIImage(named: "Grey Logo for Gallery")!, imgNames: ["None"], imageDescription: "None")
       

@@ -34,7 +34,7 @@ class InterestCell: UITableViewCell {
    }
    
    func setupCell() {
-      authorPhoto.layer.cornerRadius = 14
+      authorPhoto.layer.cornerRadius = 5.0
       articleTitle.contentHorizontalAlignment = .left
       articleBody.titleLabel?.numberOfLines = 2
       articleTitle.alpha = 0.6
